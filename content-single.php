@@ -20,6 +20,7 @@
 						<?php $large_image = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large'); ?>
 						<a class="fancyimg" href="<?php echo $large_image[0]; ?>">
 							<?php the_post_thumbnail('foto-single-thumbnail', array( 'class' => 'photo thumbnail', 'alt' => get_the_title(), 'title' => get_the_title()));?>
+							<span class="pop-up"><?php _e('Large Image', 'foto'); ?></span>
 						</a>
 					</figure>
 				<?php endif; ?>

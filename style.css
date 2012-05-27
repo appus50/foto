@@ -1417,6 +1417,44 @@ This is our main styles for theme development
 }
 .primary .entry-thumbnail {
   margin-bottom: 20px;
+  -webkit-transition: all 0.2s ease-in-out;
+  -webkit-transition-delay: 0s;
+  -moz-transition: all 0.2s ease-in-out 0s;
+  -ms-transition: all 0.2s ease-in-out 0s;
+  -o-transition: all 0.2s ease-in-out 0s;
+  transition: all 0.2s ease-in-out 0s;
+}
+.primary .entry-thumbnail a {
+  display: block;
+  position: relative;
+}
+.primary .entry-thumbnail a:hover > .pop-up {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}
+.primary .entry-thumbnail:hover {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=40);
+  opacity: 0.4;
+}
+.primary .entry-thumbnail .pop-up {
+  background: url('img/zoom.png') no-repeat center center;
+  display: block;
+  height: 60px;
+  left: 45%;
+  text-indent: 110%;
+  white-space: nowrap;
+  overflow: hidden;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  position: absolute;
+  top: 43%;
+  -webkit-transition: all 0.2s ease-in-out;
+  -webkit-transition-delay: 0s;
+  -moz-transition: all 0.2s ease-in-out 0s;
+  -ms-transition: all 0.2s ease-in-out 0s;
+  -o-transition: all 0.2s ease-in-out 0s;
+  transition: all 0.2s ease-in-out 0s;
+  width: 60px;
 }
 
 .entry-content {
@@ -1501,6 +1539,11 @@ This is our main styles for theme development
 }
 .secondary .content-data .separator {
   margin-right: 5px;
+}
+
+.edit-link {
+  clear: both;
+  display: block;
 }
 
 /* 	404
@@ -2696,7 +2739,7 @@ Miscellaneous styles
 /* 	CONTACT FORM 7
 	----------------- */
 .entry-content .wpcf7 {
-  background: #eeeeee;
+  background: whitesmoke;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;

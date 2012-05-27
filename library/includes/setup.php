@@ -43,7 +43,7 @@ if ( ! function_exists( 'foto_setup' ) ):
 		// Add custom image sizes
 		add_image_size( 'foto-featured' , 700, 300, true ); // 700x300
 		add_image_size( 'foto-home-thumbnail' , 220, 150, true ); // 220x150
-		add_image_size( 'foto-single-thumbnail' , 700, 9999, true ); // 700 pixels wide (and unlimited height)
+		add_image_size( 'foto-single-thumbnail' , 700, 350, true ); // 700x350
 		
 	}
 endif; // end foto_setup

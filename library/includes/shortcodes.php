@@ -2,13 +2,13 @@
 /**
  * This file contains all shortcodes
  *
- * @package tiga
- * @since tiga 0.0.1
+ * @package foto
+ * @since foto 0.0.1
  */
 
-add_shortcode( 'notice', 'tiga_notice' );
-add_shortcode( 'button', 'tiga_button' );
-add_shortcode( 'fancybox', 'tiga_fancybox' );
+add_shortcode( 'notice', 'foto_notice' );
+add_shortcode( 'button', 'foto_button' );
+add_shortcode( 'fancybox', 'foto_fancybox' );
  
 /**
  * Shortcode to create a notice box
@@ -17,9 +17,9 @@ add_shortcode( 'fancybox', 'tiga_fancybox' );
  * class: normal, warning, tip, info, error, 
  * download, success, help, delete
  *
- * @since tiga 0.0.1
+ * @since foto 0.0.1
  */
-function tiga_notice($atts, $content = null) {
+function foto_notice($atts, $content = null) {
 	extract( shortcode_atts( array(
 			'class' => 'normal'
 			), $atts ) 
@@ -38,11 +38,11 @@ function tiga_notice($atts, $content = null) {
  * class: color class (btn-black, btn-red, btn-yellow, btn-green, btn-blue and btn-purple,)
  * target: anchor tag target(_self as default)
  *
- * @since tiga 0.0.1
+ * @since foto 0.0.1
  *
  */
 
-function tiga_button( $atts, $content = null ) {
+function foto_button( $atts, $content = null ) {
 	extract( shortcode_atts( array(
 			'link' => '',
 			'class' => '',
@@ -64,9 +64,9 @@ function tiga_button( $atts, $content = null ) {
  * alt: the image alt attribute
  * thumb: the image thumbnail
  *
- * @since tiga 0.0.1
+ * @since foto 0.0.1
  */
-function tiga_fancybox( $atts, $content = null ) {
+function foto_fancybox( $atts, $content = null ) {
 	extract( shortcode_atts( array(
 			'title' => '',
 			'alt' => '',
