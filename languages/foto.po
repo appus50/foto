@@ -1,0 +1,623 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Foto 0.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-05-27 19:57+0700\n"
+"PO-Revision-Date: 2012-05-27 19:58+0700\n"
+"Last-Translator: Satrya <satryabima24@gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: gettext;gettext_noop;__;_e;_n\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-Language: English\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+#: 404.php:18
+msgid "Oops! That page can&rsquo;t be found"
+msgstr ""
+
+#: 404.php:22
+msgid "It looks like nothing was found at this location. Maybe try you can try to search ?"
+msgstr ""
+
+#: comments.php:32
+#, php-format
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgstr ""
+
+#: comments.php:59
+msgid "Comments are closed."
+msgstr ""
+
+#: content-page.php:14
+#: content-single.php:30
+msgid "Pages:"
+msgstr ""
+
+#: content-page.php:15
+msgid "Edit"
+msgstr ""
+
+#: content-single.php:28
+msgid "Description"
+msgstr ""
+
+#: content-single.php:45
+msgid "Entry Meta"
+msgstr ""
+
+#: footer.php:24
+#, php-format
+msgid "Powered by <a href=\"http://wordpress.org/\" title=\"%1$s\" rel=\"generator\">%2$s</a> &middot; Theme by <a href=\"http://satrya.me/\" title=\"%3$s\" rel=\"designer\">%4$s</a>"
+msgstr ""
+
+#: header.php:54
+#: header.php:56
+msgid "Subscribe our rss feed"
+msgstr ""
+
+#: header.php:54
+#: header.php:56
+msgid "Rss Feed"
+msgstr ""
+
+#: header.php:60
+msgid "Add me to your circle"
+msgstr ""
+
+#: header.php:60
+msgid "Google Plus"
+msgstr ""
+
+#: header.php:62
+msgid "Add me as your friend"
+msgstr ""
+
+#: header.php:62
+msgid "Facebook"
+msgstr ""
+
+#: header.php:64
+msgid "Follow Me"
+msgstr ""
+
+#: header.php:64
+msgid "Twitter"
+msgstr ""
+
+#: no-results.php:14
+msgid "Nothing Found"
+msgstr ""
+
+#: no-results.php:20
+#, php-format
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: no-results.php:24
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgstr ""
+
+#: no-results.php:29
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+msgstr ""
+
+#: searchform.php:11
+msgid "Search"
+msgstr ""
+
+#: options-framework.php:170
+msgid "Foto Theme Options"
+msgstr ""
+
+#: options-framework.php:240
+msgid "Click OK to reset. Any theme settings will be lost!"
+msgstr ""
+
+#: options-framework.php:273
+msgid "Default options restored."
+msgstr ""
+
+#: options-framework.php:314
+msgid "Options saved."
+msgstr ""
+
+#: options-framework.php:370
+msgid "Theme Options"
+msgstr ""
+
+#: options-medialibrary-uploader.php:26
+msgid "Theme Options Media"
+msgstr ""
+
+#: options-medialibrary-uploader.php:129
+msgid "Upload"
+msgstr ""
+
+#: options-medialibrary-uploader.php:152
+msgid "View File"
+msgstr ""
+
+#: options-medialibrary-uploader.php:289
+msgid "Gallery"
+msgstr ""
+
+#: options-medialibrary-uploader.php:289
+msgid "Previously Uploaded"
+msgstr ""
+
+#: options-sanitize.php:232
+msgid "No Repeat"
+msgstr ""
+
+#: options-sanitize.php:233
+msgid "Repeat Horizontally"
+msgstr ""
+
+#: options-sanitize.php:234
+msgid "Repeat Vertically"
+msgstr ""
+
+#: options-sanitize.php:235
+msgid "Repeat All"
+msgstr ""
+
+#: options-sanitize.php:248
+msgid "Top Left"
+msgstr ""
+
+#: options-sanitize.php:249
+msgid "Top Center"
+msgstr ""
+
+#: options-sanitize.php:250
+msgid "Top Right"
+msgstr ""
+
+#: options-sanitize.php:251
+msgid "Middle Left"
+msgstr ""
+
+#: options-sanitize.php:252
+msgid "Middle Center"
+msgstr ""
+
+#: options-sanitize.php:253
+msgid "Middle Right"
+msgstr ""
+
+#: options-sanitize.php:254
+msgid "Bottom Left"
+msgstr ""
+
+#: options-sanitize.php:255
+msgid "Bottom Center"
+msgstr ""
+
+#: options-sanitize.php:256
+msgid "Bottom Right"
+msgstr ""
+
+#: options-sanitize.php:269
+msgid "Scroll Normally"
+msgstr ""
+
+#: options-sanitize.php:270
+msgid "Fixed in Place"
+msgstr ""
+
+#: options-sanitize.php:344
+msgid "Normal"
+msgstr ""
+
+#: options-sanitize.php:345
+msgid "Italic"
+msgstr ""
+
+#: options-sanitize.php:346
+msgid "Bold"
+msgstr ""
+
+#: options-sanitize.php:347
+msgid "Bold Italic"
+msgstr ""
+
+#: extensions.php:72
+#: extensions.php:74
+msgid "Category Archive: "
+msgstr ""
+
+#: extensions.php:98
+#, php-format
+msgid "Posts Published in: %s"
+msgstr ""
+
+#: extensions.php:150
+msgid "Search Results:"
+msgstr ""
+
+#: extensions.php:155
+msgid "Tag Archive:"
+msgstr ""
+
+#: extensions.php:160
+msgid "Posts Written by:"
+msgstr ""
+
+#: extensions.php:165
+msgid "Error 404:"
+msgstr ""
+
+#: extensions.php:166
+msgid "Page Not Found"
+msgstr ""
+
+#: extensions.php:170
+msgid "Post Format Archive:"
+msgstr ""
+
+#: extensions.php:214
+msgid "Display your recent tweets to your readers."
+msgstr ""
+
+#: extensions.php:215
+msgid "&raquo; Foto Twitter Widget"
+msgstr ""
+
+#: extensions.php:227
+#: extensions.php:335
+msgid "Title:"
+msgstr ""
+
+#: extensions.php:232
+msgid "Twitter Username:"
+msgstr ""
+
+#: extensions.php:238
+msgid "Number of Tweets to Retrieve:"
+msgstr ""
+
+#: extensions.php:334
+#, php-format
+msgid "Please complete your bio information on the <a href=\"%s\">Profile Page</a> <em>(fill the nickname, twitter and Biographical Info)</em>"
+msgstr ""
+
+#: extensions.php:351
+msgid "Social"
+msgstr ""
+
+#: filters.php:51
+msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: options.php:30
+msgid "Single post"
+msgstr ""
+
+#: options.php:31
+msgid "Page"
+msgstr ""
+
+#: options.php:32
+msgid "Both"
+msgstr ""
+
+#: options.php:33
+msgid "None"
+msgstr ""
+
+#: options.php:37
+msgid "Two"
+msgstr ""
+
+#: options.php:38
+msgid "Three"
+msgstr ""
+
+#: options.php:39
+msgid "Four"
+msgstr ""
+
+#: options.php:40
+msgid "Five"
+msgstr ""
+
+#: options.php:41
+msgid "Six"
+msgstr ""
+
+#: options.php:42
+msgid "Seven"
+msgstr ""
+
+#: options.php:43
+msgid "Eight"
+msgstr ""
+
+#: options.php:44
+msgid "Nine"
+msgstr ""
+
+#: options.php:45
+msgid "Ten"
+msgstr ""
+
+#: options.php:51
+msgid "General Settings"
+msgstr ""
+
+#: options.php:55
+msgid "Custom Logo"
+msgstr ""
+
+#: options.php:56
+msgid "Upload a logo for your website, or specify the image address of your online logo. Recommended size is 300x100"
+msgstr ""
+
+#: options.php:61
+msgid "Custom Favicon"
+msgstr ""
+
+#: options.php:62
+msgid "Upload a favicon for your website, or specify the image address of your online favicon. Recommended size is 16x16"
+msgstr ""
+
+#: options.php:67
+msgid "Custom CSS"
+msgstr ""
+
+#: options.php:68
+msgid "Quickly add some CSS rules to your theme by adding it to this box."
+msgstr ""
+
+#: options.php:74
+msgid "Analytic Code"
+msgstr ""
+
+#: options.php:75
+msgid "Paste your Google Analytics (or other) tracking code here. It will be inserted before the closing body tag of your theme."
+msgstr ""
+
+#: options.php:82
+msgid "Theme Settings"
+msgstr ""
+
+#: options.php:86
+msgid "Facebook open graph default thumb"
+msgstr ""
+
+#: options.php:87
+msgid "Upload the default facebook open graph thumbnail"
+msgstr ""
+
+#: options.php:92
+msgid "Welcome Text"
+msgstr ""
+
+#: options.php:93
+msgid "Put your welcome text here, it only visible on home page"
+msgstr ""
+
+#: options.php:99
+msgid "Select a number of featured posts"
+msgstr ""
+
+#: options.php:100
+msgid "How many featured posts you want to show ?"
+msgstr ""
+
+#: options.php:107
+msgid "Display social share button"
+msgstr ""
+
+#: options.php:108
+msgid "Display social share on single post and page"
+msgstr ""
+
+#: options.php:117
+msgid "Social Settings"
+msgstr ""
+
+#: options.php:121
+msgid "Custom RSS Feed"
+msgstr ""
+
+#: options.php:122
+msgid "You can put the feedburner link here"
+msgstr ""
+
+#: options.php:128
+msgid "Twitter url. ex: http://twitter.com/yourusername"
+msgstr ""
+
+#: options.php:134
+msgid "Facebook url. ex: http://www.facebook.com/yourusername"
+msgstr ""
+
+#: options.php:140
+msgid "Google plus url. ex: https://plus.google.com/u/109253446701726260861"
+msgstr ""
+
+#: setup.php:38
+msgid "Footer Navigation"
+msgstr ""
+
+#: templates.php:84
+#, php-format
+msgid "<a href=\"%1$s\" title=\"%2$s\" rel=\"bookmark\">%3$s</a>"
+msgstr ""
+
+#: templates.php:86
+#, php-format
+msgid "Permalink to %s"
+msgstr ""
+
+#: templates.php:95
+#, php-format
+msgid "Author Archives: %s"
+msgstr ""
+
+#: templates.php:103
+msgid "404 Not Found"
+msgstr ""
+
+#: templates.php:106
+#, php-format
+msgid "Search Results for: %s"
+msgstr ""
+
+#: templates.php:109
+#, php-format
+msgid "Category Archives: %s"
+msgstr ""
+
+#: templates.php:112
+#, php-format
+msgid "Tag Archives: %s"
+msgstr ""
+
+#: templates.php:115
+#, php-format
+msgid "Daily Archives: %s"
+msgstr ""
+
+#: templates.php:118
+#, php-format
+msgid "Monthly Archives: %s"
+msgstr ""
+
+#: templates.php:121
+#, php-format
+msgid "Yearly Archives: %s"
+msgstr ""
+
+#: templates.php:124
+msgid "Archives"
+msgstr ""
+
+#: templates.php:146
+msgid "Post navigation"
+msgstr ""
+
+#: templates.php:157
+msgid "Older"
+msgstr ""
+
+#: templates.php:161
+msgid "Newer "
+msgstr ""
+
+#: templates.php:184
+msgid "Post view"
+msgstr ""
+
+#: templates.php:186
+msgid "Permalink"
+msgstr ""
+
+#: templates.php:203
+msgid "Author"
+msgstr ""
+
+#: templates.php:205
+#, php-format
+msgid "View all posts by %s"
+msgstr ""
+
+#: templates.php:208
+msgid "Published"
+msgstr ""
+
+#: templates.php:213
+msgid "Category"
+msgstr ""
+
+#: templates.php:217
+#, php-format
+msgid "<span class=\"%1$s category\">%2$s</span>"
+msgstr ""
+
+#: templates.php:221
+msgid "Tagged"
+msgstr ""
+
+#: templates.php:225
+#, php-format
+msgid "<span class=\"%1$s\">%2$s</span>"
+msgstr ""
+
+#: templates.php:252
+msgid "0 View"
+msgstr ""
+
+#: templates.php:275
+msgid "Views"
+msgstr ""
+
+#: templates.php:313
+msgid "Pingback:"
+msgstr ""
+
+#: templates.php:330
+#, php-format
+msgid "%1$s on %2$s <span class=\"says\">said:</span>"
+msgstr ""
+
+#: templates.php:336
+#, php-format
+msgid "%1$s at %2$s"
+msgstr ""
+
+#: templates.php:343
+msgid "Reply <span>&darr;</span>"
+msgstr ""
+
+#: templates.php:347
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: templates.php:390
+msgid "Comment navigation"
+msgstr ""
+
+#: templates.php:391
+msgid "&larr; Older Comments"
+msgstr ""
+
+#: templates.php:392
+msgid "Newer Comments &rarr;"
+msgstr ""
+
+#: widgets.php:17
+msgid "Home Widget"
+msgstr ""
+
+#: widgets.php:18
+msgid "This sidebar appears on the right side of your site on home page"
+msgstr ""
+
+#: widgets.php:26
+msgid "Footer Left Widget"
+msgstr ""
+
+#: widgets.php:27
+#: widgets.php:36
+#: widgets.php:45
+#: widgets.php:54
+msgid "This sidebar appears on the footer of your site"
+msgstr ""
+
+#: widgets.php:35
+msgid "Footer Center Widget"
+msgstr ""
+
+#: widgets.php:44
+msgid "Footer Right Widget"
+msgstr ""
+
+#: widgets.php:53
+msgid "Page Widget"
+msgstr ""
+
