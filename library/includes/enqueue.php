@@ -12,6 +12,7 @@
 add_action('wp_enqueue_scripts', 'foto_enqueue_styles');
 add_action('wp_enqueue_scripts', 'foto_enqueue_scripts');
 add_action( 'wp_print_styles', 'foto_deregister_styles', 100 );
+add_action( 'wp_footer', 'foto_js_ie' );
 
 /**
  * Function to call the main style file
@@ -44,6 +45,8 @@ function foto_enqueue_scripts() {
 	
 	wp_enqueue_script( 'modernizr', get_template_directory_uri() . '/js/library/modernizr-2.5.3.min.js', array('jquery'), '2.5.3' );
 	
+	wp_enqueue_script( 'nwmathcer', get_template_directory_uri() . '/js/library/nwmatcher-1.2.5-min.js', array('jquery'), '2.5.3', true );
+	
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
@@ -58,4 +61,18 @@ function foto_enqueue_scripts() {
 	
 }
 
+/**
+ * JS library only for IE
+ *
+ * @since foto 0.0.1
+ */
+function foto_js_ie() { ?>
+	<!--[if (gte IE 6)&(lte IE 8)]>
+		<script src="<?php echo get_template_directory_uri(); ?>/js/library/selectivizr-min.js"></script>
+	<![endif]-->
+	
+<?php 
+}
+ 
+ 
 ?>

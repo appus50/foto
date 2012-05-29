@@ -42,10 +42,6 @@
 	<?php do_action( 'foto_after' ); ?>
 </div><!-- end #page .hfeed -->
 
-<!--[if lt IE 9]>
-	<script src="<?php echo get_template_directory_uri(); ?>/js/library/selectivizr-min.js"></script>
-<![endif]-->
-
 <?php wp_footer(); ?>
 
 </body>

@@ -554,11 +554,11 @@ legend {
   top: 0;
 }
 
-fieldset, #IE8#HACK {
+fieldset {
   padding-top: 1.4em;
 }
 
-legend, #IE8#HACK {
+legend {
   margin-top: 0;
   margin-bottom: 0;
 }
