@@ -125,6 +125,12 @@ html {
   -ms-text-size-adjust: 100%;
 }
 
+a:focus {
+  outline: thin dotted #333;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
 nav ul,
 nav ol {
   list-style: none;
@@ -394,7 +400,7 @@ acronym {
 }
 
 del {
-  color: #cccccc;
+  color: #aaaaaa;
   text-decoration: line-through;
   vertical-align: baseline;
 }
@@ -429,20 +435,17 @@ code,
 kbd,
 samp,
 tt {
-  font-family: "andale mono", "lucida console", monospace;
+  font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
 }
 
 ins {
-  background: #ff9;
-  color: black;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 mark {
   background: #ff0;
-  color: black;
-  font-style: italic;
-  font-weight: bold;
+  color: #990;
+  font-size: 11px;
 }
 
 /* 	BLOCKQUOTE
@@ -566,8 +569,6 @@ legend {
 /* 	FORMALIZE.CSS
 	- http://formalize.me/
 	----------------- */
-/* 	INPUT WIDTH
-	----------------- */
 .input_tiny {
   width: 50px;
 }
@@ -629,11 +630,17 @@ textarea:focus {
   z-index: 1;
 }
 
-input[type="file"]:focus, input[type="file"]:active,
+input[type="file"]:focus,
 input[type="radio"]:focus,
-input[type="radio"]:active,
 input[type="checkbox"]:focus,
-input[type="checkbox"]:active {
+select:focus,
+button:focus,
+input[type="reset"]:focus,
+input[type="submit"]:focus,
+input[type="button"]:focus {
+  outline: thin dotted #333;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
@@ -927,8 +934,7 @@ Basic and global styles for images, caption, & gallery
 	----------------- */
 .entry-content img,
 .comment-content img,
-.widget img,
-img.photo {
+.widget img {
   max-width: 100%;
   /* Fluid images for posts, comments, and widgets */
 }
@@ -972,10 +978,11 @@ p img,
   max-width: 96%;
   padding: 15px 10px 10px;
   -webkit-transition: all 0.15s ease-in-out;
-  -moz-transition: all 0.15s ease-in-out;
-  -ms-transition: all 0.15s ease-in-out;
-  -o-transition: all 0.15s ease-in-out;
-  transition: all 0.15s ease-in-out;
+  -webkit-transition-delay: 0s;
+  -moz-transition: all 0.15s ease-in-out 0s;
+  -ms-transition: all 0.15s ease-in-out 0s;
+  -o-transition: all 0.15s ease-in-out 0s;
+  transition: all 0.15s ease-in-out 0s;
 }
 .wp-caption img {
   display: block;

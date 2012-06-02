@@ -10,21 +10,85 @@
 
 /**
  * wp_title filter
+ * Credit: Thematic theme
  *
  * @since foto 0.0.1
  */
 add_filter( 'wp_title', 'foto_title' );
-function foto_title( $title ) {
+function foto_title() {
    
-    $site_title = get_bloginfo( 'name' );
-    $filtered_title = $site_title . $title;
-    
-    if ( is_singular() ) {
-        $the_title = get_the_title();
-        $filtered_title = $the_title;
-    }
-    
-    return $filtered_title;
+	$site_name = get_bloginfo('name' , 'display');
+	$separator = apply_filters('foto_doctitle_separator', '|');
+			
+	if ( is_single() ) {
+		$content = single_post_title('', FALSE);
+	}
+	elseif ( is_home() || is_front_page() ) { 
+		$content = get_bloginfo('description', 'display');
+	}
+	elseif ( is_page() ) { 
+		$content = single_post_title('', FALSE); 
+	}
+	elseif ( is_search() ) { 
+		$content = __('Search Results for:', 'foto'); 
+		$content .= ' ' . get_search_query();
+	}
+	elseif ( is_category() ) {
+		$content = __('Category Archives:', 'foto');
+		$content .= ' ' . single_cat_title('', FALSE);;
+	}
+	elseif ( is_tag() ) { 
+		$content = __('Tag Archives:', 'foto');
+		$content .= ' ' . foto_tag_query();
+	}
+	elseif ( is_404() ) { 
+		$content = __('Not Found', 'foto'); 
+	}
+	else { 
+		$content = get_bloginfo('description', 'display');
+	}
+
+	if ( get_query_var('paged') ) {
+		$content .= ' ' .$separator. ' ';
+		$content .= 'Page';
+		$content .= ' ';
+		$content .= get_query_var('paged');
+	}
+
+	if($content) {
+		if ( is_home() || is_front_page() ) {
+			$elements = array(
+				'site_name' => $site_name,
+				'separator' => $separator,
+				'content' => $content
+			);
+		}
+		else {
+			$elements = array(
+				'content' => $content
+			);
+		}  
+	} else {
+		$elements = array(
+			'site_name' => $site_name
+		);
+	}
+
+	// Filters should return an array
+	$elements = apply_filters('foto_doctitle', $elements);
+	
+	// But if they don't, it won't try to implode
+	if( is_array($elements) ) {
+		$doctitle = implode(' ', $elements);
+	}
+	else {
+		$doctitle = $elements;
+	}
+	
+	$doctitle = $doctitle . "\n";
+	
+	echo $doctitle;
+   
 }
 
  
