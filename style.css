@@ -34,7 +34,7 @@ See: http://codex.wordpress.org/Child_Themes
 	- Header
 		Styles for header area such as header, custom header, menus etc
 	- Main styles
-		This is our main styles for theme development
+		Styles for global content
 	- Sidebar & Widget
 		Styles for sidebar and all widget areas
 	- Comments
@@ -1255,7 +1255,7 @@ Styles for header area such as header, custom header, menus etc.
 
 /* =============================================================================
 - Main styles
-This is our main styles for theme development
+Styles for global content
 ============================================================================= */
 /* 	BIG TEXT ON HEADER
 	----------------- */
@@ -1465,6 +1465,7 @@ This is our main styles for theme development
 }
 
 .entry-content {
+  color: #999999;
   /* post heading */
 }
 .entry-content h1 {
@@ -1507,9 +1508,6 @@ This is our main styles for theme development
 .secondary {
   display: inline;
   float: left;
-  margin-bottom: 20px;
-}
-.secondary .exif-data {
   margin-bottom: 20px;
 }
 .secondary .content-heading {
@@ -1676,7 +1674,6 @@ Styles for sidebar and all widget areas
 /* 	CUSTOM AUTHOR PROFILE WIDGET
 	----------------- */
 .foto_author_bio .widget-author-info {
-  color: #cccccc;
   font-size: 12px;
   line-height: 1.5em;
 }

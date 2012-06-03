@@ -243,6 +243,44 @@ if ( !function_exists( 'optionsframework_page' ) ) {
 		</form>
 	</div> <!-- / #container -->
 	
+	<div id="admin-side" class="admin-side">
+
+		<div class="postbox-container">
+			<div class="metabox-holder">	
+				<div class="meta-box-sortables ui-sortable">
+				
+					<div id="foto-support" class="postbox">
+						<h3 class="hndle"><span><?php _e('Need a Support ?', 'foto'); ?></span></h3>
+						<div class="inside">
+							<p><?php _e('You can report an issue <a href="http://satrya.me/foto-wordpress-theme/" target="_blank">here</a> or you can just drop me an email to asksatrya@gmail.com.', 'foto'); ?></p>
+						</div>
+					</div>
+					
+					<div id="foto-links" class="postbox">
+						<h3 class="hndle"><span><?php _e('Links', 'foto'); ?></span></h3>
+						<div class="inside">
+							<ul class="links">
+								<li><a href="http://satrya.me" target="_blank"><?php _e('Foto by Satrya', 'foto'); ?></a></li>
+								<li><a href="http://twitter.com/msattt" target="_blank"><?php _e('Follow me on Twitter @msattt', 'foto'); ?></a></li>
+							</ul>
+						</div>
+					</div>
+					
+					<div id="foto-contribute" class="postbox">
+						<h3 class="hndle"><span><?php _e('Contribute to Foto Theme', 'foto'); ?></span></h3>
+						<div class="inside">
+							<ul class="links">
+								<li><?php _e('You can contribute to this project by submitting a translation or you can <a href="https://github.com/satrya/foto" target="_blank">fork the code on github</a>', 'foto'); ?></li>
+							</ul>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+
+	</div>
+	
 	</div>
 	</div> <!-- / .wrap -->
 
