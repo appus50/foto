@@ -85,7 +85,7 @@ function foto_title() {
 		$doctitle = $elements;
 	}
 	
-	$doctitle = $doctitle . "\n";
+	$doctitle = $doctitle;
 	
 	echo $doctitle;
    
@@ -227,5 +227,19 @@ function foto_new_contactmethods( $contactmethods ) {
     $contactmethods['twitter'] = 'Twitter'; // Add Twitter
 	
     return $contactmethods;
+}
+
+
+/**
+ * Customize tag cloud widget
+ *
+ * @since foto 0.0.1
+ */
+add_filter( 'widget_tag_cloud_args', 'foto_new_tag_cloud' );
+function foto_new_tag_cloud( $args ) {
+	$args['largest'] 	= 12;
+	$args['smallest'] 	= 12;
+	$args['unit'] 		= 'px';
+	return $args;
 }
 ?>
