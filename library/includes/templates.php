@@ -9,25 +9,14 @@
  */
 
 /**
- * function to call first image
+ * Adding the Open Graph in the Language Attributes
  *
  * @since foto 0.0.1
  */
-function foto_first_image() {
-	global $post, $posts;
-	$first_img = '';
-	ob_start();
-	ob_end_clean();
-	$output = preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post->post_content, $matches);
-	if (array_key_exists(1, $matches)) {
-		if (array_key_exists(0, $matches[1])) {
-			$first_img  = $matches [1] [0];
-		}
+add_filter('language_attributes', 'foto_add_opengraph_doctype');
+function foto_add_opengraph_doctype( $output ) {
+		return $output . ' xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml"';
 	}
-	
-	return $first_img;
-} 
-
 
 /**
  * Prints the Facebook open-graph meta
@@ -36,38 +25,69 @@ function foto_first_image() {
  */
 add_action('wp_head', 'foto_open_graph', 1);
 function foto_open_graph() {
-	global $post, $posts;
-	$thumbs = of_get_option('foto_og_thumb');
-	$getthumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' );
+	global $post;
+	$thumbsfb = of_get_option('foto_og_thumb');
 	
-	if(is_single() || is_page()) {
-		$excerpt = ""; 
+	$excerpt = ""; 
 		if (has_excerpt($post->ID)) {
 			$excerpt = esc_attr(strip_tags(get_the_excerpt($post->ID)));
-		}else{
+		} else {
 			$excerpt = esc_attr(str_replace("\r\n",' ',substr(strip_tags(strip_shortcodes($post->post_content)), 0, 160)));
 		}
 ?>
 	<!-- Open Graph Tags -->
-	<meta property="og:type" content="article">
-	<meta property="og:title" content="<?php single_post_title(''); ?>">
-	<meta property="og:url" content="<?php the_permalink(); ?>">
-	<meta property="og:site_name" content="<?php bloginfo('name'); ?>">
-	<meta property="og:description" content="<?php echo $excerpt; ?>">
-	<meta property="og:image" content="<?php if ( (has_post_thumbnail()) ) { echo $getthumbnail[0]; } else { echo foto_first_image(); } ?>">
+	<meta property="og:type" content="<?php if (is_single() || is_page()) { echo "article"; } else { echo "website";} ?>">
+	<meta property="og:title" content="<?php if (is_single() || is_page()) { echo esc_attr( get_the_title() ); } else { echo get_bloginfo('name'); } ?>">
+	<meta property="og:url" content="<?php if (is_single() || is_page()) { echo esc_url( get_permalink() ); } else { echo esc_url( home_url( '/' ) ); } ?>">
+	<meta property="og:description" content="<?php
+		if (is_single() || is_page()) {
+			if ( function_exists('wpseo_get_value') ) {
+				echo wpseo_get_value('metadesc'); // get meta descriptions from WordPress SEO plugin
+			} else {
+				echo $excerpt;
+			}
+		} else {
+			echo get_bloginfo('description');
+		}
+	?>">
+	<meta property="og:site_name" content="<?php echo get_bloginfo('name'); ?>">
+	<meta property="og:image" content="<?php if ( is_single() ) { echo foto_fb_image(); } else { echo esc_url( $thumbsfb ); } ?>">
 	<!-- End Open Graph Tags -->
-	<?php  } else { ?>
-	<!-- Open Graph Tags -->
-	<meta property="og:type" content="article">
-	<meta property="og:title" content="<?php bloginfo('name'); ?>">
-	<meta property="og:url" content="<?php echo esc_url( home_url( '/' ) ); ?>">
-	<meta property="og:description" content="<?php bloginfo('description'); ?>">
-	<meta property="og:site_name" content="<?php bloginfo('name'); ?>">
-	<meta property="og:image" content="<?php echo esc_url( $thumbs ); ?>">
-	<!-- End Open Graph Tags -->
-<?php  }
+<?php
 	
 } //end foto_open_graph()
+
+
+/**
+ * Get image for facebook open-graph
+ *
+ * @since foto 0.0.1
+ */
+function foto_fb_image() {
+	global $post;
+	$thumbsfb = of_get_option('foto_og_thumb');
+	$src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), '', '' );
+	
+	if ( has_post_thumbnail($post->ID) ) {
+		$fbimage = $src[0];
+	} else {
+		global $post, $posts;
+		$fbimage = '';
+		ob_start();
+		ob_end_clean();
+		$output = preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post->post_content, $matches);
+		if (array_key_exists(1, $matches)) {
+			if (array_key_exists(0, $matches[1])) {
+				$fbimage  = $matches [1] [0];
+			}
+		}
+	}
+	if(empty($fbimage)) {
+		$fbimage = esc_url( $thumbsfb );
+	}
+	
+	return $fbimage;
+}
 
 
 /**

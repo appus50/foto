@@ -91,6 +91,42 @@ function foto_title() {
    
 }
 
+
+/**
+ * Create nice multi_tag_title
+ * Credit: Thematic theme
+ *
+ * @since foto 0.0.1
+ */
+function foto_tag_query() {
+	$nice_tag_query = get_query_var( 'tag' ); // tags in current query
+	$nice_tag_query = str_replace(' ', '+', $nice_tag_query); // get_query_var returns ' ' for AND, replace by +
+	$tag_slugs = preg_split('%[,+]%', $nice_tag_query, -1, PREG_SPLIT_NO_EMPTY); // create array of tag slugs
+	$tag_ops = preg_split('%[^,+]*%', $nice_tag_query, -1, PREG_SPLIT_NO_EMPTY); // create array of operators
+
+	$tag_ops_counter = 0;
+	$nice_tag_query = '';
+
+	foreach ($tag_slugs as $tag_slug) { 
+		$tag = get_term_by('slug', $tag_slug ,'post_tag');
+		// prettify tag operator, if any
+		if ( isset($tag_ops[$tag_ops_counter])  &&  $tag_ops[$tag_ops_counter] == ',') {
+			$tag_ops[$tag_ops_counter] = ', ';
+		} elseif ( isset( $tag_ops[$tag_ops_counter])  &&  $tag_ops[$tag_ops_counter] == '+') {
+			$tag_ops[$tag_ops_counter] = ' + ';
+		}
+		// concatenate display name and prettified operators
+		if ( isset( $tag_ops[$tag_ops_counter] ) ) {
+			$nice_tag_query = $nice_tag_query.$tag->name.$tag_ops[$tag_ops_counter];
+			$tag_ops_counter += 1;
+		} else {
+			$nice_tag_query = $nice_tag_query.$tag->name;
+			$tag_ops_counter += 1;
+		}
+	}
+	return $nice_tag_query;
+}
+
  
 /**
  * Sets the post excerpt length to 50 words.
