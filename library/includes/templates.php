@@ -40,7 +40,7 @@ function foto_open_graph() {
 	<meta property="og:title" content="<?php if ( is_singular() ) { echo esc_attr( get_the_title() ); } else { echo get_bloginfo('name'); } ?>">
 	<meta property="og:url" content="<?php if ( is_singular() ) { echo esc_url( get_permalink() ); } else { echo esc_url( home_url( '/' ) ); } ?>">
 	<meta property="og:description" content="<?php
-		if (is_single() || is_page()) {
+		if ( is_singular() ) {
 			if ( function_exists('wpseo_get_value') ) {
 				echo wpseo_get_value('metadesc'); // get meta descriptions from WordPress SEO plugin
 			} else {
@@ -51,7 +51,7 @@ function foto_open_graph() {
 		}
 	?>">
 	<meta property="og:site_name" content="<?php echo get_bloginfo('name'); ?>">
-	<meta property="og:image" content="<?php if ( is_single() ) { echo foto_fb_image(); } else { echo esc_url( $thumbsfb ); } ?>">
+	<meta property="og:image" content="<?php if ( is_singular() ) { echo foto_fb_image(); } else { echo esc_url( $thumbsfb ); } ?>">
 	<!-- End Open Graph Tags -->
 <?php
 	
