@@ -36,9 +36,9 @@ function foto_open_graph() {
 		}
 ?>
 	<!-- Open Graph Tags -->
-	<meta property="og:type" content="<?php if (is_single() || is_page()) { echo "article"; } else { echo "website";} ?>">
-	<meta property="og:title" content="<?php if (is_single() || is_page()) { echo esc_attr( get_the_title() ); } else { echo get_bloginfo('name'); } ?>">
-	<meta property="og:url" content="<?php if (is_single() || is_page()) { echo esc_url( get_permalink() ); } else { echo esc_url( home_url( '/' ) ); } ?>">
+	<meta property="og:type" content="<?php if ( is_singular() ) { echo "article"; } else { echo "website";} ?>">
+	<meta property="og:title" content="<?php if ( is_singular() ) { echo esc_attr( get_the_title() ); } else { echo get_bloginfo('name'); } ?>">
+	<meta property="og:url" content="<?php if ( is_singular() ) { echo esc_url( get_permalink() ); } else { echo esc_url( home_url( '/' ) ); } ?>">
 	<meta property="og:description" content="<?php
 		if (is_single() || is_page()) {
 			if ( function_exists('wpseo_get_value') ) {
