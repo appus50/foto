@@ -21,8 +21,6 @@ add_action( 'wp_footer', 'foto_js_ie' );
  */
 function foto_enqueue_styles() {
 	wp_enqueue_style( 'style', get_stylesheet_uri(), '', '0.0.1', 'all' );
-	
-	wp_enqueue_style( 'shortcodes', get_stylesheet_directory_uri() . '/shortcodes.css', '', '0.0.1', 'all' );
 }
 
 /**

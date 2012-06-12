@@ -30,9 +30,6 @@ if ( ! function_exists( 'foto_setup' ) ):
 		// Add default posts and comments RSS feed links to <head>.
 		add_theme_support( 'automatic-feed-links' );
 		
-		// Add support for custom backgrounds
-		add_custom_background();
-		
 		// This theme uses wp_nav_menu() in two locations.
 		register_nav_menus( array(
 				'primary' => __( 'Footer Navigation', 'foto' )

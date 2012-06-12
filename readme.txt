@@ -1,7 +1,7 @@
 -------------------------------------------------------
 	Foto Theme
 -------------------------------------------------------
-Foto is based on _s(https://github.com/Automattic/_s) theme by Automattic, rebuild using blueprint css framework & my own css framework(basically css framework).
+Foto is based on _s(https://github.com/Automattic/_s) theme by Automattic, rebuild using blueprint css framework & Pondasee(https://github.com/tokokoo/pondasee).
 
 Contributors	: satrya
 Demo			: http://satrya.me/demo/foto
@@ -25,5 +25,7 @@ Thanks for downloading Foto theme, I hope you enjoyed it!. If you spot a bug you
 3. jQuery Friendly IE6 Upgrade Notice Plugin - GPL, http://code.google.com/p/friendly-ie6-upgrade-notice/
 4. Selectivizr - MIT, http://selectivizr.com/
 5. FancyBox - MIT/GPL, http://fancybox.net/
-6. Reponsive Slides - MIT,http://responsiveslides.com/
+6. Reponsive Slides - MIT, http://responsiveslides.com/
 7. Modernizr - MIT/BSD, http://www.modernizr.com/download/
+8. Krio Image Loader - Unknown License, https://github.com/krio/jquery-image-loader-plugin
+9. Nwmatcher - License URL https://github.com/dperini/nwmatcher/blob/master/LICENSE

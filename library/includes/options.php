@@ -26,6 +26,14 @@ function optionsframework_option_name() {
 
 function optionsframework_options() {
 	
+	$background = array(
+		'color' => '',
+		'image' => '',
+		'repeat' => 'repeat',
+		'position' => 'top center',
+		'attachment'=>'scroll' 
+	);
+	
 	$social = array(
 		'foto_post' => __('Single post', 'foto'),
 		'foto_page' => __('Page', 'foto'),
@@ -88,6 +96,14 @@ function optionsframework_options() {
 		'id' => 'foto_og_thumb',
 		'type' => 'upload');
 		
+	$options[] = array(
+		'name' =>  __('Custom background', 'foto'),
+		'desc' => __('Customize your background', 'foto'),
+		'id' => 'foto_custom_bg',
+		'std' => $background,
+		'type' => 'background' 
+	);
+		
 	$options[] = array( 
 		'name' => __('Welcome Text', 'foto'),
 		'desc' => __('Put your welcome text here, it only visible on home page', 'foto'),
@@ -103,13 +119,13 @@ function optionsframework_options() {
 		'std' => '3',
 		'options' => $numbers );
 						
-	$options[] = array( 
+	/* $options[] = array( 
 		"name" => __('Display social share button', 'foto'),
 		"desc" => __('Display social share on single post and page', 'foto'),
 		"id" => "foto_social_share",
 		"std" => 'foto_post',
 		"type" => "radio",
-		"options" => $social );
+		"options" => $social ); */
 	
 	/* ============================== End Theme Settings ================================= */	
 	

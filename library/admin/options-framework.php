@@ -261,6 +261,7 @@ if ( !function_exists( 'optionsframework_page' ) ) {
 						<div class="inside">
 							<ul class="links">
 								<li><a href="http://satrya.me" target="_blank"><?php _e('Foto by Satrya', 'foto'); ?></a></li>
+								<li><?php _e('Foto theme documentation. Soon!', 'foto'); ?></li>
 								<li><a href="http://twitter.com/msattt" target="_blank"><?php _e('Follow me on Twitter @msattt', 'foto'); ?></a></li>
 							</ul>
 						</div>

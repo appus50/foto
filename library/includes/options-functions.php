@@ -8,6 +8,7 @@
 
 add_action('wp_head', 'foto_custom_favicon', 5);
 add_action('wp_head', 'foto_custom_css', 10);
+add_action('wp_head', 'foto_custom_background', 10);
 add_action('wp_footer','foto_analytics');
 
 /**
@@ -21,6 +22,25 @@ function foto_custom_css() {
 	if (of_get_option('foto_custom_css')) {
 		echo "<!-- Custom Styling -->\n<style type=\"text/css\">\n" . esc_attr( of_get_option('foto_custom_css') ) . "\n</style>\n";
 	}
+}
+
+/**
+ * Custom background
+ *
+ * @since foto 0.0.1
+ */
+function foto_custom_background() {
+	$bg = of_get_option('foto_custom_bg');
+	
+	if($bg) { ?>
+		<style type="text/css">
+			<?php if ($bg['image']) {
+				echo 'body { background: '.$bg['color'].' url('. esc_url( $bg['image'] ). ') '.$bg['repeat'].' '.$bg['position'].' '.$bg['attachment'].'; }'. "\n";
+			} else {
+				echo 'body { background: '.$bg['color']. ' }'. "\n";
+			} ?>
+		</style>
+	<?php }
 }
 
 /**
