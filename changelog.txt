@@ -5,6 +5,7 @@
 - Update theme options
 - Fix opera transition
 - Update pondasee
+- Update language
 
 0.0.1 - 12 June 2012
 - Release
