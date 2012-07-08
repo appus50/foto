@@ -218,7 +218,7 @@ add_filter( 'body_class', 'foto_body_classes' );
 function foto_body_classes( $classes ) {
 	// Adds a class of group-blog & multi-author to blogs with more than 1 published author
 	if ( is_multi_author() ) {
-		$classes[] = 'group-blog multi-author';
+		$classes[] = 'multi-author';
 	}
 
 	return $classes;
@@ -265,7 +265,6 @@ function foto_new_contactmethods( $contactmethods ) {
     return $contactmethods;
 }
 
-
 /**
  * Customize tag cloud widget
  *
@@ -277,5 +276,22 @@ function foto_new_tag_cloud( $args ) {
 	$args['smallest'] 	= 12;
 	$args['unit'] 		= 'px';
 	return $args;
+}
+
+/**
+ * Filter in a link to a content ID attribute for the next/previous image links on image attachment pages
+ *
+ * @since Foto 0.0.2
+ */
+add_filter( 'attachment_link', 'foto_enhanced_image_navigation', 10, 2 );
+function foto_enhanced_image_navigation( $url, $id ) {
+	if ( ! is_attachment() && ! wp_attachment_is_image( $id ) )
+		return $url;
+
+	$image = get_post( $id );
+	if ( ! empty( $image->post_parent ) && $image->post_parent != $id )
+		$url .= '#main';
+
+	return $url;
 }
 ?>

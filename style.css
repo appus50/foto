@@ -2,7 +2,7 @@
 Theme Name:		Foto
 Theme URI:  	http://satrya.me/foto-wordpress-theme
 Description: 	Photo blogging theme with beautiful and modern look. Enjoy it!
-Version: 		0.0.1
+Version: 		0.0.2
 Author: 		Satrya
 Author URI:		http://satrya.me
 Tags: 			gray, white, light, two-columns, right-sidebar, fixed-width, custom-background, custom-menu, sticky-post, full-width-template, theme-options, threaded-comments, translation-ready
@@ -44,7 +44,7 @@ See: http://codex.wordpress.org/Child_Themes
 	- Footer
 		Styles for footer area
 	- Plugins
-		Collection of styles for theme plugins such as lightbox, slider, tooltip etc
+		Collection of styles for theme plugins
 	- Utilities
 		List of helper classes (eg clearfix, alignment, etc)
 	- WordPress Pagination
@@ -57,25 +57,33 @@ See: http://codex.wordpress.org/Child_Themes
    =============================================================================
 */
 @font-face {
-  font-family: 'OswaldLight';
-  src: url("fonts/oswald/Oswald-Light-webfont.eot");
-  src: url("fonts/oswald/Oswald-Light-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/oswald/Oswald-Light-webfont.woff") format("woff"), url("fonts/oswald/Oswald-Light-webfont.ttf") format("truetype"), url("fonts/oswald/Oswald-Light-webfont.svg#OswaldLight") format("svg");
+  font-family: "OswaldLight";
+  src: url('fonts/oswald/Oswald-Light-webfont.eot');
+  src: url('fonts/oswald/Oswald-Light-webfont.eot?#iefix') format('eot'), url('fonts/oswald/Oswald-Light-webfont.svg#OswaldLight') format('svg'), url('fonts/oswald/Oswald-Light-webfont.woff') format('woff'), url('fonts/oswald/Oswald-Light-webfont.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'LatoRegular';
-  src: url("fonts/lato/Lato-Reg-webfont.eot");
-  src: url("fonts/lato/Lato-Reg-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/lato/Lato-Reg-webfont.woff") format("woff"), url("fonts/lato/Lato-Reg-webfont.ttf") format("truetype"), url("fonts/lato/Lato-Reg-webfont.svg#LatoRegular") format("svg");
+  font-family: "LatoRegular";
+  src: url('fonts/lato/Lato-Reg-webfont.eot');
+  src: url('fonts/lato/Lato-Reg-webfont.eot?#iefix') format('eot'), url('fonts/lato/Lato-Reg-webfont.svg#LatoRegular') format('svg'), url('fonts/lato/Lato-Reg-webfont.woff') format('woff'), url('fonts/lato/Lato-Reg-webfont.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'LatoBold';
-  src: url("fonts/lato/Lato-Bol-webfont.eot");
-  src: url("fonts/lato/Lato-Bol-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/lato/Lato-Bol-webfont.woff") format("woff"), url("fonts/lato/Lato-Bol-webfont.ttf") format("truetype"), url("fonts/lato/Lato-Bol-webfont.svg#LatoBold") format("svg");
+  font-family: "LatoBold";
+  src: url('fonts/lato/Lato-Bol-webfont.eot');
+  src: url('fonts/lato/Lato-Bol-webfont.eot?#iefix') format('eot'), url('fonts/lato/Lato-Bol-webfont.svg#LatoBold') format('svg'), url('fonts/lato/Lato-Bol-webfont.woff') format('woff'), url('fonts/lato/Lato-Bol-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "LatoItalic";
+  src: url('fonts/lato/Lato-RegIta-webfont.eot');
+  src: url('fonts/lato/Lato-RegIta-webfont.eot?#iefix') format('eot'), url('fonts/lato/Lato-RegIta-webfont.svg#LatoItalic') format('svg'), url('fonts/lato/Lato-RegIta-webfont.woff') format('woff'), url('fonts/lato/Lato-RegIta-webfont.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -121,10 +129,6 @@ audio, canvas, video {
 audio:not([controls]),
 [hidden] {
   display: none;
-}
-
-html {
-  -ms-text-size-adjust: 100%;
 }
 
 a:focus {
@@ -181,6 +185,14 @@ Baseline, selection & links
 html {
   font-size: 14px;
   line-height: 1.5em;
+  overflow-y: scroll;
+  /* Keeps page centred in all browsers regardless of content height */
+  -ms-text-size-adjust: 100%;
+  /* www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */
+  -webkit-text-size-adjust: 100%;
+  /* Prevents iOS text size adjust after orientation change, without disabling user zoom */
+  -webkit-font-smoothing: antialiased;
+  /* http://maxvoltar.com/archive/-Webkit-font-smoothing */
 }
 
 body {
@@ -188,7 +200,7 @@ body {
   color: #b1b1b1;
   font-family: "LatoRegular", Arial, "Helvetica Neue", Helvetica, sans-serif;
   text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
+  /* http://aestheticallyloyal.com/public/optimize-legibility/ */
 }
 
 /* 	SELECTION
@@ -212,7 +224,7 @@ a {
   text-decoration: none;
 }
 a:hover {
-  color: #00baff;
+  color: #0095cc;
   text-decoration: underline;
 }
 a:visited, a:active {
@@ -361,13 +373,16 @@ p {
   margin: 0 0 1.5em;
 }
 
+i,
 em {
   font-style: italic;
+  font-family: "LatoItalic", Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 
 b,
 strong {
   font-weight: bold;
+  font-family: "LatoBold", Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 
 small {
@@ -381,6 +396,7 @@ cite {
 dfn {
   font-style: italic;
   font-weight: bold;
+  font-family: "LatoBold", Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 
 sub,
@@ -463,6 +479,7 @@ blockquote {
   border-left: 3px solid #eeeeee;
   color: #cccccc;
   font-style: italic;
+  font-family: Georgia, Palatino, "Palatino Linotype", Times, "Times New Roman", serif;
   margin: 1em 40px;
   padding-left: 1.35em;
 }
@@ -483,6 +500,7 @@ address {
   display: block;
   margin: 0 0 1.5em;
   font-style: italic;
+  font-family: "LatoItalic", Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 
 /* 	LISTS
@@ -524,6 +542,7 @@ dl {
 
 dt {
   font-weight: bold;
+  font-family: "LatoBold", Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 
 dd {
@@ -539,6 +558,7 @@ Base styles for various input types and form layouts
 label {
   font-weight: bold;
   font-size: 12px;
+  font-family: "LatoBold", Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 
 fieldset {
@@ -554,10 +574,9 @@ legend {
   border: 1px solid #dddddd;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
   border-radius: 5px;
   font-weight: bold;
+  font-family: "LatoBold", Arial, "Helvetica Neue", Helvetica, sans-serif;
   display: block;
   left: 0;
   margin: 0;
@@ -632,28 +651,12 @@ input,
 textarea {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
   border-radius: 3px;
-  -webkit-box-shadow: inset 0 1px 1px 0 rgba(0, 0, 0, 0.075);
-  -moz-box-shadow: inset 0 1px 1px 0 rgba(0, 0, 0, 0.075);
-  box-shadow: inset 0 1px 1px 0 rgba(0, 0, 0, 0.075);
   -webkit-transition: all 0.2s linear;
   -webkit-transition-delay: 0s;
   -moz-transition: all 0.2s linear 0s;
-  -ms-transition: all 0.2s linear 0s;
   -o-transition: all 0.2s linear 0s;
   transition: all 0.2s linear 0s;
-}
-input:focus,
-textarea:focus {
-  border-color: rgba(82, 168, 236, 0.8);
-  outline: 0;
-  outline: thin dotted \9;
-  /* IE6-9 */
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
-  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
 }
 input:invalid,
 textarea:invalid {
@@ -693,23 +696,19 @@ input[type="reset"],
 input[type="submit"],
 input[type="button"] {
   -webkit-appearance: none;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -o-border-radius: 4px;
-  border-radius: 4px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
   -webkit-background-clip: padding;
   -moz-background-clip: padding;
   background-clip: padding-box;
-  background: #dddddd url('img/button.png') repeat-x;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #dddddd));
-  background-image: -webkit-linear-gradient(#ffffff, #dddddd);
-  background-image: -moz-linear-gradient(#ffffff, #dddddd);
-  background-image: -o-linear-gradient(#ffffff, #dddddd);
-  background-image: -ms-linear-gradient(#ffffff, #dddddd);
-  background-image: linear-gradient(#ffffff, #dddddd);
-  border: 1px solid;
-  border-color: #dddddd #bbbbbb #999999;
+  background: #f2f2f2 url('img/button.png') repeat-x;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #f2f2f2));
+  background-image: -webkit-linear-gradient(#ffffff, #f2f2f2);
+  background-image: -moz-linear-gradient(#ffffff, #f2f2f2);
+  background-image: -o-linear-gradient(#ffffff, #f2f2f2);
+  background-image: linear-gradient(#ffffff, #f2f2f2);
+  border: 1px solid #e6e6e6;
   cursor: pointer;
   color: #333333;
   font: bold 12px/1.3 "Helvetica Neue", Arial, "Liberation Sans", FreeSans, sans-serif;
@@ -722,7 +721,6 @@ input[type="button"] {
   text-shadow: white 0 1px 1px;
   -webkit-transition: none;
   -moz-transition: none;
-  -ms-transition: none;
   -o-transition: none;
   transition: none;
   vertical-align: top;
@@ -732,29 +730,20 @@ button:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover,
 input[type="button"]:hover {
-  background: #eeeeee;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(1px, #eeeeee), color-stop(100%, #cccccc));
-  background-image: -webkit-linear-gradient(#ffffff, #eeeeee 1px, #cccccc);
-  background-image: -moz-linear-gradient(#ffffff, #eeeeee 1px, #cccccc);
-  background-image: -o-linear-gradient(#ffffff, #eeeeee 1px, #cccccc);
-  background-image: -ms-linear-gradient(#ffffff, #eeeeee 1px, #cccccc);
-  background-image: linear-gradient(#ffffff, #eeeeee 1px, #cccccc);
+  background: #f4f4f4;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f2f2f2), color-stop(100%, #ffffff));
+  background-image: -webkit-linear-gradient(#f2f2f2, #ffffff);
+  background-image: -moz-linear-gradient(#f2f2f2, #ffffff);
+  background-image: -o-linear-gradient(#f2f2f2, #ffffff);
+  background-image: linear-gradient(#f2f2f2, #ffffff);
 }
 button:active,
 input[type="reset"]:active,
 input[type="submit"]:active,
 input[type="button"]:active {
-  background: #dddddd;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(1px, #dddddd), color-stop(100%, #eeeeee));
-  background-image: -webkit-linear-gradient(#ffffff, #dddddd 1px, #eeeeee);
-  background-image: -moz-linear-gradient(#ffffff, #dddddd 1px, #eeeeee);
-  background-image: -o-linear-gradient(#ffffff, #dddddd 1px, #eeeeee);
-  background-image: -ms-linear-gradient(#ffffff, #dddddd 1px, #eeeeee);
-  background-image: linear-gradient(#ffffff, #dddddd 1px, #eeeeee);
-  -webkit-box-shadow: inset rgba(0, 0, 0, 0.25) 0 1px 2px 0;
-  -moz-box-shadow: inset rgba(0, 0, 0, 0.25) 0 1px 2px 0;
-  box-shadow: inset rgba(0, 0, 0, 0.25) 0 1px 2px 0;
-  border-color: #999999 #bbbbbb #dddddd;
+  box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.15);
+  box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.15);
+  outline: 0;
 }
 button::-moz-focus-inner,
 input[type="reset"]::-moz-focus-inner,
@@ -790,15 +779,15 @@ input[type="week"] {
   -webkit-background-clip: padding;
   -moz-background-clip: padding;
   background-clip: padding-box;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  -ms-border-radius: 0;
-  -o-border-radius: 0;
-  border-radius: 0;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   -webkit-appearance: none;
   background-color: white;
-  border: 1px solid;
-  border-color: #dddddd;
+  border: 1px solid #cccccc;
   color: black;
   outline: 0;
   margin: 0;
@@ -806,7 +795,7 @@ input[type="week"] {
   text-align: left;
   font-size: 13px;
   font-family: Arial, "Liberation Sans", FreeSans, sans-serif;
-  height: 2em;
+  height: 2.2em;
   vertical-align: top;
   *padding-top: 2px;
   *padding-bottom: 1px;
@@ -828,6 +817,29 @@ input[type="time"][disabled],
 input[type="url"][disabled],
 input[type="week"][disabled] {
   background-color: #eeeeee;
+}
+textarea:focus,
+select:focus,
+input[type="date"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="email"]:focus,
+input[type="month"]:focus,
+input[type="number"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="text"]:focus,
+input[type="time"]:focus,
+input[type="url"]:focus,
+input[type="week"]:focus {
+  border-color: rgba(82, 168, 236, 0.8);
+  outline: 0;
+  outline: thin dotted \9;
+  /* IE6-9 */
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
 }
 
 button[disabled],
@@ -917,6 +929,7 @@ select[size="1"] {
 textarea {
   min-height: 40px;
   overflow: auto;
+  padding: 5px;
   resize: vertical;
   width: 100%;
 }
@@ -1027,7 +1040,6 @@ p img,
   -webkit-transition: all 0.15s ease-in-out;
   -webkit-transition-delay: 0s;
   -moz-transition: all 0.15s ease-in-out 0s;
-  -ms-transition: all 0.15s ease-in-out 0s;
   -o-transition: all 0.15s ease-in-out 0s;
   transition: all 0.15s ease-in-out 0s;
 }
@@ -1051,6 +1063,7 @@ p img,
   font-size: 14px;
   font-style: normal;
   font-weight: bold;
+  font-family: "LatoBold", Arial, "Helvetica Neue", Helvetica, sans-serif;
   margin-right: 5px;
   position: absolute;
   left: 10px;
@@ -1224,12 +1237,22 @@ Styles for header area such as header, custom header, menus etc.
   text-indent: 110%;
   white-space: nowrap;
   overflow: hidden;
-  -webkit-transition: all 0.25s ease-in-out;
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.25s;
+  -moz-transition-duration: 0.25s;
+  -o-transition-duration: 0.25s;
+  transition-duration: 0.25s;
+  -webkit-transition-timing-function: ease-in-out;
+  -moz-transition-timing-function: ease-in-out;
+  -o-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
-  -moz-transition: all 0.25s ease-in-out 0s;
-  -ms-transition: all 0.25s ease-in-out 0s;
-  -o-transition: all 0.25s ease-in-out 0s;
-  transition: all 0.25s ease-in-out 0s;
+  -moz-transition-delay: 0s;
+  -o-transition-delay: 0s;
+  transition-delay: 0s;
   width: 26px;
 }
 .site-social span.feed a {
@@ -1273,8 +1296,6 @@ Styles for header area such as header, custom header, menus etc.
   border: none;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
   border-radius: 3px;
   -webkit-box-shadow: inset 0 0 3px 0 rgba(0, 0, 0, 0.1);
   -moz-box-shadow: inset 0 0 3px 0 rgba(0, 0, 0, 0.1);
@@ -1359,7 +1380,6 @@ Styles for global content
   -webkit-transition: all 0.2s ease-in-out;
   -webkit-transition-delay: 0s;
   -moz-transition: all 0.2s ease-in-out 0s;
-  -ms-transition: all 0.2s ease-in-out 0s;
   -o-transition: all 0.2s ease-in-out 0s;
   transition: all 0.2s ease-in-out 0s;
   position: relative;
@@ -1374,6 +1394,10 @@ Styles for global content
   -o-transform: scale(1.1, 1.1);
   transform: scale(1.1, 1.1);
 }
+.home-content:hover .entry-title a,
+.home-content:hover .entry-title a:visited {
+  color: #00baff;
+}
 .home-content .entry-thumbnail img {
   display: block;
 }
@@ -1382,8 +1406,6 @@ Styles for global content
   border: 1px solid #eeeeee;
   -webkit-border-radius: 0 0 3px 3px;
   -moz-border-radius: 0 0 3px 3px;
-  -ms-border-radius: 0 0 3px 3px;
-  -o-border-radius: 0 0 3px 3px;
   border-radius: 0 0 3px 3px;
   padding: 10px;
   position: relative;
@@ -1474,7 +1496,6 @@ Styles for global content
   -webkit-transition: all 0.2s ease-in-out;
   -webkit-transition-delay: 0s;
   -moz-transition: all 0.2s ease-in-out 0s;
-  -ms-transition: all 0.2s ease-in-out 0s;
   -o-transition: all 0.2s ease-in-out 0s;
   transition: all 0.2s ease-in-out 0s;
 }
@@ -1505,7 +1526,6 @@ Styles for global content
   -webkit-transition: all 0.2s ease-in-out;
   -webkit-transition-delay: 0s;
   -moz-transition: all 0.2s ease-in-out 0s;
-  -ms-transition: all 0.2s ease-in-out 0s;
   -o-transition: all 0.2s ease-in-out 0s;
   transition: all 0.2s ease-in-out 0s;
   width: 60px;
@@ -1567,12 +1587,12 @@ Styles for global content
   background-image: -webkit-linear-gradient(center top, #ffffff, #f5f5f5);
   background-image: -moz-linear-gradient(center top, #ffffff, #f5f5f5);
   background-image: -o-linear-gradient(center top, #ffffff, #f5f5f5);
-  background-image: -ms-linear-gradient(center top, #ffffff, #f5f5f5);
   background-image: linear-gradient(center top, #ffffff, #f5f5f5);
   border: 1px solid #eeeeee;
   font-size: 18px;
+  line-height: 1.5em;
   margin: 0;
-  padding: 5px 10px;
+  padding: 5px 10px 3px;
   text-shadow: white 0 1px 0;
 }
 .secondary .content-data {
@@ -1645,22 +1665,28 @@ Styles for sidebar and all widget areas
 /* 	TAG CLOUD WIDGET
 	----------------- */
 .widget_tag_cloud .tagcloud a {
-  background: #eee;
+  background: #f2f2f2;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #f2f2f2));
+  background-image: -webkit-linear-gradient(#ffffff, #f2f2f2);
+  background-image: -moz-linear-gradient(#ffffff, #f2f2f2);
+  background-image: -o-linear-gradient(#ffffff, #f2f2f2);
+  background-image: linear-gradient(#ffffff, #f2f2f2);
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
   border-radius: 3px;
+  border: 1px solid #e6e6e6;
+  color: #999999;
   display: inline-block;
   *display: inline;
-  color: #999999;
+  height: 2em;
+  line-height: 1.9em;
   margin: 0 5px 5px 0;
-  padding: 2px 5px;
-  text-shadow: #fbfbfb 0 1px 1px;
+  padding: 0 8px;
+  text-shadow: 0 1px 0 white;
   *zoom: 1;
 }
 .widget_tag_cloud .tagcloud a:hover {
-  background: #e1e1e1;
+  background: #f2f2f2;
   text-decoration: none;
 }
 
@@ -1686,6 +1712,7 @@ Styles for sidebar and all widget areas
 #wp-calendar caption {
   color: #999999;
   font-weight: bold;
+  font-family: "LatoBold", Arial, "Helvetica Neue", Helvetica, sans-serif;
   padding-bottom: 4px;
   text-align: left;
 }
@@ -1883,8 +1910,6 @@ Styles for comments area(comment form & comment lists)
   border: 1px solid #eeeeee;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
   border-radius: 10px;
   display: inline;
   float: left;
@@ -1999,7 +2024,7 @@ Styles for footer area
 
 /* =============================================================================
 - Plugins
-Collection of styles for theme plugins such as lightbox, slider, tooltip etc
+Collection of styles for theme plugins
 ============================================================================= */
 /* 	RESPONSIVE SLIDES
 	http://responsiveslides.com v1.32 by @viljamis 
@@ -2058,7 +2083,6 @@ Collection of styles for theme plugins such as lightbox, slider, tooltip etc
   -webkit-transition: all 0.25s ease-in-out;
   -webkit-transition-delay: 0s;
   -moz-transition: all 0.25s ease-in-out 0s;
-  -ms-transition: all 0.25s ease-in-out 0s;
   -o-transition: all 0.25s ease-in-out 0s;
   transition: all 0.25s ease-in-out 0s;
   top: 50%;
@@ -2696,13 +2720,10 @@ hr.lightborder {
   background-image: -webkit-linear-gradient(center top, #ffffff, #f5f5f5);
   background-image: -moz-linear-gradient(center top, #ffffff, #f5f5f5);
   background-image: -o-linear-gradient(center top, #ffffff, #f5f5f5);
-  background-image: -ms-linear-gradient(center top, #ffffff, #f5f5f5);
   background-image: linear-gradient(center top, #ffffff, #f5f5f5);
   border: 1px solid #eeeeee;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
   border-radius: 3px;
   color: #aaaaaa;
   font-family: "OswaldLight", Arial, "Helvetica Neue", Helvetica, sans-serif;
@@ -2770,6 +2791,48 @@ hr.lightborder {
   background: url('img/sprite-icons.png') no-repeat -57px -125px;
 }
 
+/* 	ATTACHMENT PAGE NAVIGATION
+	----------------- */
+.image-navigation {
+  display: inline;
+  float: right;
+  margin-right: 20px;
+}
+.image-navigation a {
+  display: -moz-inline-stack;
+  -moz-box-orient: vertical;
+  display: inline-block;
+  *display: inline;
+  vertical-align: top;
+  *zoom: 1;
+  height: 35px;
+  text-indent: 110%;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 35px;
+}
+.image-navigation .previous-image {
+  display: inline;
+  float: left;
+  margin-right: 5px;
+}
+.image-navigation .previous-image a {
+  background: url('img/sprite-icons.png') no-repeat -8px -84px;
+}
+.image-navigation .previous-image a:hover {
+  background: url('img/sprite-icons.png') no-repeat -9px -125px;
+}
+.image-navigation .next-image {
+  display: inline;
+  float: left;
+}
+.image-navigation .next-image a {
+  background: url('img/sprite-icons.png') no-repeat -56px -84px;
+}
+.image-navigation .next-image a:hover {
+  background: url('img/sprite-icons.png') no-repeat -57px -125px;
+}
+
 /* =============================================================================
 - Miscellaneous
 Miscellaneous styles
@@ -2783,7 +2846,6 @@ Miscellaneous styles
   background-image: -webkit-linear-gradient(center top, #ffffff, #f5f5f5);
   background-image: -moz-linear-gradient(center top, #ffffff, #f5f5f5);
   background-image: -o-linear-gradient(center top, #ffffff, #f5f5f5);
-  background-image: -ms-linear-gradient(center top, #ffffff, #f5f5f5);
   background-image: linear-gradient(center top, #ffffff, #f5f5f5);
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
@@ -2791,8 +2853,6 @@ Miscellaneous styles
   border: 1px solid #eeeeee;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
   border-radius: 3px;
   color: #aaaaaa;
   font-family: "OswaldLight", Arial, "Helvetica Neue", Helvetica, sans-serif;
@@ -2805,15 +2865,15 @@ Miscellaneous styles
   background-image: -webkit-linear-gradient(center top, #f5f5f5, #ffffff);
   background-image: -moz-linear-gradient(center top, #f5f5f5, #ffffff);
   background-image: -o-linear-gradient(center top, #f5f5f5, #ffffff);
-  background-image: -ms-linear-gradient(center top, #f5f5f5, #ffffff);
   background-image: linear-gradient(center top, #f5f5f5, #ffffff);
   text-decoration: none;
 }
 .btn:active, #searchform input[type="submit"]:active, #respond input[type="submit"]:active, .comment-navigation .nav-next a:active,
 .comment-navigation .nav-previous a:active, .paging-navigation a:active {
-  -webkit-box-shadow: inset 0 0 2px 0 rgba(0, 0, 0, 0.25);
-  -moz-box-shadow: inset 0 0 2px 0 rgba(0, 0, 0, 0.25);
-  box-shadow: inset 0 0 2px 0 rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: inset 0 2px 3px 0 rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: inset 0 2px 3px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: inset 0 2px 3px 0 rgba(0, 0, 0, 0.15);
+  outline: 0;
 }
 
 /* 	CONTACT FORM 7
@@ -2822,25 +2882,9 @@ Miscellaneous styles
   background: whitesmoke;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
   border-radius: 5px;
   margin: 0 0 1.5em 0;
   padding: 1.4em;
-}
-.entry-content .wpcf7 input[type="text"],
-.entry-content .wpcf7 input[type="email"],
-.entry-content .wpcf7 textarea {
-  -webkit-box-shadow: inset 0 0 1px 0 rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: inset 0 0 1px 0 rgba(0, 0, 0, 0.2);
-  box-shadow: inset 0 0 1px 0 rgba(0, 0, 0, 0.2);
-}
-.entry-content .wpcf7 input[type="text"]:focus,
-.entry-content .wpcf7 input[type="email"]:focus,
-.entry-content .wpcf7 textarea:focus {
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
 }
 .entry-content .wpcf7 input[type="text"],
 .entry-content .wpcf7 input[type="email"] {
@@ -2867,7 +2911,7 @@ Miscellaneous styles
 
 /* =============================================================================
 - Conditional IE class
-	Style for IE only
+Style for IE only
 ============================================================================= */
 .ie button:hover,
 .ie input[type="reset"]:hover,

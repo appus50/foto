@@ -4,7 +4,7 @@ Description: A framework for building theme options.
 Author: Devin Price
 Author URI: http://www.wptheming.com
 License: GPLv2
-Version: 1.1
+Version: 1.3
 */
 
 /*
@@ -222,67 +222,26 @@ if ( !function_exists( 'optionsframework_page' ) ) {
 		settings_errors();
 ?>
 
-	<div class="wrap">
+	<div id="optionsframework-wrap" class="wrap">
     <?php screen_icon( 'themes' ); ?>
     <h2 class="nav-tab-wrapper">
         <?php echo optionsframework_tabs(); ?>
     </h2>
 
-    <div class="metabox-holder">
-    <div id="optionsframework" class="postbox">
-		<form action="options.php" method="post">
-		<?php settings_fields('optionsframework'); ?>
-
-		<?php optionsframework_fields(); /* Settings */ ?>
-
-        <div id="optionsframework-submit">
-			<input type="submit" class="button-primary" name="update" value="<?php esc_attr_e( 'Save Options', 'foto' ); ?>" />
-            <input type="submit" class="reset-button button-secondary" name="reset" value="<?php esc_attr_e( 'Restore Defaults', 'foto' ); ?>" onclick="return confirm( '<?php print esc_js( __( 'Click OK to reset. Any theme settings will be lost!', 'foto' ) ); ?>' );" />
-            <div class="clear"></div>
-		</div>
-		</form>
-	</div> <!-- / #container -->
-	
-	<div id="admin-side" class="admin-side">
-
-		<div class="postbox-container">
-			<div class="metabox-holder">	
-				<div class="meta-box-sortables ui-sortable">
-				
-					<div id="foto-support" class="postbox">
-						<h3 class="hndle"><span><?php _e('Need a Support ?', 'foto'); ?></span></h3>
-						<div class="inside">
-							<p><?php _e('You can report an issue <a href="http://satrya.me/foto-wordpress-theme/" target="_blank">here</a> or you can just drop me an email to asksatrya@gmail.com.', 'foto'); ?></p>
-						</div>
-					</div>
-					
-					<div id="foto-links" class="postbox">
-						<h3 class="hndle"><span><?php _e('Links', 'foto'); ?></span></h3>
-						<div class="inside">
-							<ul class="links">
-								<li><a href="http://satrya.me" target="_blank"><?php _e('Foto by Satrya', 'foto'); ?></a></li>
-								<li><?php _e('Foto theme documentation. Soon!', 'foto'); ?></li>
-								<li><a href="http://twitter.com/msattt" target="_blank"><?php _e('Follow me on Twitter @msattt', 'foto'); ?></a></li>
-							</ul>
-						</div>
-					</div>
-					
-					<div id="foto-contribute" class="postbox">
-						<h3 class="hndle"><span><?php _e('Contribute to Foto Theme', 'foto'); ?></span></h3>
-						<div class="inside">
-							<ul class="links">
-								<li><?php _e('You can contribute to this project by submitting a translation or you can <a href="https://github.com/satrya/foto" target="_blank">fork the code on github</a>', 'foto'); ?></li>
-							</ul>
-						</div>
-					</div>
-					
-				</div>
+    <div id="optionsframework-metabox" class="metabox-holder">
+	    <div id="optionsframework" class="postbox">
+			<form action="options.php" method="post">
+			<?php settings_fields('optionsframework'); ?>
+			<?php optionsframework_fields(); /* Settings */ ?>
+			<div id="optionsframework-submit">
+				<input type="submit" class="button-primary" name="update" value="<?php esc_attr_e( 'Save Options', 'foto' ); ?>" />
+				<input type="submit" class="reset-button button-secondary" name="reset" value="<?php esc_attr_e( 'Restore Defaults', 'foto' ); ?>" onclick="return confirm( '<?php print esc_js( __( 'Click OK to reset. Any theme settings will be lost!', 'foto' ) ); ?>' );" />
+				<div class="clear"></div>
 			</div>
-		</div>
-
+			</form>
+		</div> <!-- / #container -->
 	</div>
-	
-	</div>
+	<?php do_action('optionsframework_after'); ?>
 	</div> <!-- / .wrap -->
 
 <?php
@@ -295,8 +254,7 @@ if ( !function_exists( 'optionsframework_page' ) ) {
  * This runs after the submit/reset button has been clicked and
  * validates the inputs.
  *
- * @uses $_POST['reset']
- * @uses $_POST['update']
+ * @uses $_POST['reset'] to restore default options
  */
 function optionsframework_validate( $input ) {
 
@@ -311,13 +269,15 @@ function optionsframework_validate( $input ) {
 	if ( isset( $_POST['reset'] ) ) {
 		add_settings_error( 'options-framework', 'restore_defaults', __( 'Default options restored.', 'foto' ), 'updated fade' );
 		return of_get_default_values();
-	}
+	} else {
 
 	/*
-	 * Udpdate Settings.
+	 * Update Settings
+	 *
+	 * This used to check for $_POST['update'], but has been updated
+	 * to be compatible with the theme customizer introduced in WordPress 3.4
 	 */
 	 
-	if ( isset( $_POST['update'] ) ) {
 		$clean = array();
 		$options = optionsframework_options();
 		foreach ( $options as $option ) {
@@ -334,13 +294,13 @@ function optionsframework_validate( $input ) {
 
 			// Set checkbox to false if it wasn't sent in the $_POST
 			if ( 'checkbox' == $option['type'] && ! isset( $input[$id] ) ) {
-				$input[$id] = '0';
+				$input[$id] = false;
 			}
 
 			// Set each item in the multicheck to false if it wasn't sent in the $_POST
 			if ( 'multicheck' == $option['type'] && ! isset( $input[$id] ) ) {
 				foreach ( $option['options'] as $key => $value ) {
-					$input[$id][$key] = '0';
+					$input[$id][$key] = false;
 				}
 			}
 
@@ -353,12 +313,7 @@ function optionsframework_validate( $input ) {
 		add_settings_error( 'options-framework', 'save_options', __( 'Options saved.', 'foto' ), 'updated fade' );
 		return $clean;
 	}
-
-	/*
-	 * Request Not Recognized.
-	 */
 	
-	return of_get_default_values();
 }
 
 /**

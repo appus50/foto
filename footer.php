@@ -19,7 +19,7 @@
 	
 	<div id="site-credit" class="site-info clearfix">
 		<div class="credits col-8">
-			<p>&copy; Copyleft <?php echo date('Y'); ?> <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php bloginfo('name'); ?>"><?php bloginfo('name'); ?></a></p>
+			<p>&copy; Copyrights <?php echo date('Y'); ?> <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php bloginfo('name'); ?>"><?php bloginfo('name'); ?></a></p>
 			<p>
 				<?php printf( __('Powered by <a href="http://wordpress.org/" title="%1$s" rel="generator">%2$s</a> &middot; Theme by <a href="http://satrya.me/" title="%3$s" rel="designer">%4$s</a>', 'foto'),
 					esc_attr( 'A Semantic Personal Publishing Platform'),

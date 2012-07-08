@@ -14,11 +14,13 @@
 
 get_header(); ?>
 		
-		<section id="featured" class="site-featured-content clearfix">
-		
-			<?php get_template_part( 'content', 'featured' ); ?>
+		<?php if( of_get_option('foto_show_featured') ) : ?>
+			<section id="featured" class="site-featured-content clearfix">
 			
-		</section><!-- end #featured .site-featured-content -->
+				<?php get_template_part( 'content', 'featured' ); ?>
+				
+			</section><!-- end #featured .site-featured-content -->
+		<?php endif; ?>
 		
 		<?php do_action( 'foto_before_content' ); ?>
 		
@@ -26,10 +28,24 @@ get_header(); ?>
 			
 			<?php do_action( 'foto_before_article' ); ?>
 			
-			<?php query_posts( array(
-					"post__not_in" =>get_option("sticky_posts")
-				));
-				if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+			<?php
+				$paged = 1;
+				if ( get_query_var( 'paged' ) ) { $paged = get_query_var( 'paged' ); }
+				if ( get_query_var( 'page' ) ) { $paged = get_query_var( 'page' ); }
+				$paged = intval( $paged );
+				
+				if( of_get_option('foto_show_featured') ) {
+					$args = array(
+						'post__not_in' => get_option('sticky_posts'),
+						'paged' => $paged,
+					);
+					query_posts( $args );
+				}
+				
+				if ( have_posts() ) : 
+			?>
+
+				<?php while ( have_posts() ) : the_post(); ?>
 
 					<?php get_template_part( 'content' ); ?>
 

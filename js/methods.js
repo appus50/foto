@@ -7,7 +7,8 @@ $j(document).ready(function(){
 	
 	$j("#main").krioImageLoader();
 	
-	$j( ".gallery a" ).attr( 'rel', 'fancy_group' );
+	// Detect image with extension .jpg, ,.png and .gif and add rel="fancy_group"
+	$j( ".gallery a[href$='.jpg'], .gallery a[href$='.png'], .gallery a[href$='.gif']" ).attr( 'rel', 'fancy_group' );
 	$j( "a.fancyimg, a[rel=fancy_group]" ).fancybox();
 	
 });

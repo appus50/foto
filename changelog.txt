@@ -1,0 +1,10 @@
+0.0.2 - 08 July 2012
+- Fix pagination on home page
+- Add image.php as single image gallery post
+- Remove Facebook open-graph
+- Update theme options
+- Fix opera transition
+- Update pondasee
+
+0.0.1 - 12 June 2012
+- Release

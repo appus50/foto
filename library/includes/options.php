@@ -56,7 +56,7 @@ function optionsframework_options() {
 	$options = array();
 
 	$options[] = array( 
-		'name' => __('General Settings', 'foto'),
+		'name' => __('General', 'foto'),
 		'type' => 'heading');
 							
 	$options[] = array( 
@@ -87,22 +87,8 @@ function optionsframework_options() {
 	/* ============================== End General Settings ================================= */	
 	
 	$options[] = array( 
-		'name' => __('Theme Settings', 'foto'),
+		'name' => __('Theme', 'foto'),
 		'type' => 'heading');
-	
-	$options[] = array( 
-		'name' => __('Facebook open graph default thumb', 'foto'),
-		'desc' => __('Upload the default facebook open graph thumbnail', 'foto'),
-		'id' => 'foto_og_thumb',
-		'type' => 'upload');
-		
-	$options[] = array(
-		'name' =>  __('Custom background', 'foto'),
-		'desc' => __('Customize your background', 'foto'),
-		'id' => 'foto_custom_bg',
-		'std' => $background,
-		'type' => 'background' 
-	);
 		
 	$options[] = array( 
 		'name' => __('Welcome Text', 'foto'),
@@ -111,10 +97,32 @@ function optionsframework_options() {
 		'id' => 'foto_welcome_text',
 		'type' => 'textarea');
 		
+	$options[] = array(
+		'name' =>  __('Custom background', 'foto'),
+		'desc' => __('Customize your background', 'foto'),
+		'id' => 'foto_custom_bg',
+		'std' => $background,
+		'type' => 'background' 
+	);
+	
+	$options[] = array( 
+		'name' => __('Featured posts slider', 'foto'),
+		'desc' => __('Featured posts is based on sticky post. To show the featured posts, you only need create a post then check the sticky post option.', 'foto'),
+		'type' => 'info'
+	);
+	
+	$options[] = array( 
+		'name' => __('Show featured posts slider', 'foto'),
+		'desc' => __('Check this options to show featured posts slider on home page', 'foto'),
+		'id' => 'foto_show_featured',
+		'type' => 'checkbox'
+	);
+	
 	$options[] = array( 
 		'name' => __('Select a number of featured posts', 'foto'),
 		'desc' => __('How many featured posts you want to show ?', 'foto'),
 		'id' => 'foto_featured',
+		'class' => 'hidden',
 		'type' => 'select',
 		'std' => '3',
 		'options' => $numbers );
@@ -130,7 +138,7 @@ function optionsframework_options() {
 	/* ============================== End Theme Settings ================================= */	
 	
 	$options[] = array( 
-		'name' => __('Social Settings', 'foto'),
+		'name' => __('Social', 'foto'),
 		'type' => 'heading');
 		
 	$options[] = array( 
@@ -161,4 +169,28 @@ function optionsframework_options() {
 	/* ============================== End Social Settings ================================= */
 	
 	return $options;
+}
+
+/* 
+ * Custom script for theme options
+ *
+ * @since foto 0.0.1
+ */
+
+add_action('optionsframework_custom_scripts', 'foto_custom_scripts');
+function foto_custom_scripts() { ?>
+	<script type='text/javascript'>
+	jQuery(document).ready(function($) {
+
+		$('#foto_show_featured').click(function() {
+			$('#section-foto_featured').fadeToggle(400);
+		});
+		
+		if ($('#foto_show_featured:checked').val() !== undefined) {
+			$('#section-foto_featured').show();
+		}
+		
+	});
+	</script>
+<?php
 }
