@@ -16,7 +16,7 @@ function foto_options_sidebar() { ?>
 				<h3 class="hndle"><span><?php _e('Recommended Theme', 'foto'); ?></span></h3>
 				<div class="inside">
 					<p><strong>Rumput Hijau</strong></p>
-					<a href="http://satrya.me/rumput-hijau-wordpress-theme/" title="Download now!" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/library/img/rumput-hijau.png"></a>
+					<a href="http://satrya.me/rumput-hijau-wordpress-theme/" title="Download now!" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/rumput-hijau.png"></a>
 					<p>Responsive, clean and search engine friendly WordPress theme.<br><a href="http://satrya.me/rumput-hijau-wordpress-theme/" title="Download now!" target="_blank">Get it for free! &rarr;</a></p>
 				</div>
 			</div>
