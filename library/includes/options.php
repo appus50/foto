@@ -107,13 +107,7 @@ function optionsframework_options() {
 	
 	$options[] = array( 
 		'name' => __('Featured posts slider', 'foto'),
-		'desc' => __('Featured posts is based on sticky post. To show the featured posts, you only need create a post then check the sticky post option.', 'foto'),
-		'type' => 'info'
-	);
-	
-	$options[] = array( 
-		'name' => __('Show featured posts slider', 'foto'),
-		'desc' => __('Check this options to show featured posts slider on home page', 'foto'),
+		'desc' => __('Check this option to show featured posts on home page. Featured posts is based on sticky post. To show the featured posts, you only need create a post then check the sticky post option.', 'foto'),
 		'id' => 'foto_show_featured',
 		'type' => 'checkbox'
 	);
@@ -126,14 +120,6 @@ function optionsframework_options() {
 		'type' => 'select',
 		'std' => '3',
 		'options' => $numbers );
-						
-	/* $options[] = array( 
-		"name" => __('Display social share button', 'foto'),
-		"desc" => __('Display social share on single post and page', 'foto'),
-		"id" => "foto_social_share",
-		"std" => 'foto_post',
-		"type" => "radio",
-		"options" => $social ); */
 	
 	/* ============================== End Theme Settings ================================= */	
 	

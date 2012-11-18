@@ -15,7 +15,10 @@
  * @since foto 0.0.1
  */
 add_filter( 'wp_title', 'foto_title' );
-function foto_title() {
+function foto_title( $wp_doctitle ) {
+
+	if ( is_feed() || !foto_seo() )
+    	return $wp_doctitle;
    
 	$site_name = get_bloginfo('name' , 'display');
 	$separator = apply_filters('foto_doctitle_separator', '|');
@@ -127,6 +130,23 @@ function foto_tag_query() {
 	return $nice_tag_query;
 }
 
+/**
+ * Switch Foto SEO functions on or off
+ * 
+ * Provides compatibility with SEO plugins: All in One SEO Pack, HeadSpace, 
+ * Platinum SEO Pack, wpSEO and Yoast SEO. Default: ON
+ * 
+ * Credit: Thematic theme
+ * @since foto 0.0.3
+ */
+function foto_seo() {
+	if ( class_exists('All_in_One_SEO_Pack') || class_exists('HeadSpace_Plugin') || class_exists('Platinum_SEO_Pack') || class_exists('wpSEO') || defined('WPSEO_VERSION') ) {
+		$content = FALSE;
+	} else {
+		$content = true;
+	}
+		return apply_filters( 'foto_seo', $content );
+}
  
 /**
  * Sets the post excerpt length to 50 words.

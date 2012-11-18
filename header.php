@@ -52,7 +52,7 @@
 				<?php if( of_get_option('foto_rss_custom') ) { ?>
 					<span class="feed"><a href="<?php echo esc_url( of_get_option('foto_rss_custom') ); ?>" title="<?php _e('Subscribe our rss feed', 'foto'); ?>"><?php _e('Rss Feed', 'foto'); ?></a></span>
 				<?php } else { ?>
-					<span class="feed"><a href="<?php bloginfo('rss_url'); ?>" title="<?php _e('Subscribe our rss feed', 'foto'); ?>"><?php _e('Rss Feed', 'foto'); ?></a></span>
+					<span class="feed"><a href="<?php echo get_feed_link( 'rss2' ); ?>" title="<?php _e('Subscribe our rss feed', 'foto'); ?>"><?php _e('Rss Feed', 'foto'); ?></a></span>
 				<?php }
 				
 				if( of_get_option('foto_gplus_username') ) { ?>

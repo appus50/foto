@@ -4,7 +4,7 @@ Contributor: satrya
 Demo: http://satrya.me/demo/foto
 Requires at least: 3.3
 Tested up to: 3.4
-Stable tag: 0.0.2
+Stable tag: 0.0.4
 
 == Description ==
 

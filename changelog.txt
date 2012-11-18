@@ -1,3 +1,15 @@
+0.0.4 - 23 July 2012
+- Fix footer menu bug
+- Fix rss feed link in header
+- Enqueue the comment-reply script at the comment_form_before hook
+
+0.0.3 - 22 July 2012
+- Update ugly theme options between content and sidebar
+- Fix 'Views' word not translatable
+- Centered slider navigations
+- Fix incompatible title tag with all in one seo pack & platinum seo pack plugin
+- Update modernizr
+
 0.0.2 - 08 July 2012
 - Fix pagination on home page
 - Add image.php as single image gallery post

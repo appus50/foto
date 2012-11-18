@@ -31,8 +31,11 @@
 		</div>
 		
 		<nav class="site-navigation main-navigation col-16 last" role="navigation">
-			<?php wp_nav_menu( array (  
+			<?php 
+			if (has_nav_menu('primary'))
+			wp_nav_menu( array (  
 						'container' => '',
+						'depth'		=> 1,
 						'menu_class' => 'main-nav',
 						'theme_location' => 'primary' ) 
 					); ?>

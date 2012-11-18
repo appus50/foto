@@ -189,7 +189,7 @@ function foto_getPostViews($postID){
         add_post_meta($postID, $count_key, '0');
         return __('0 View', 'foto');
     }
-    return $count.' Views';
+    return $count . __(' Views', 'foto');
 }
 
 // function to count views.

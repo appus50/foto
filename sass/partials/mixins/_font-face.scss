@@ -1,0 +1,72 @@
+// Font-face Mixins
+// @font-face & font mixins
+// Author: Satrya - @msattt
+// =================================================================================
+
+@include font-face (
+	'OswaldLight',
+	font-files(
+		'oswald/Oswald-Light-webfont.svg#OswaldLight', svg,
+		'oswald/Oswald-Light-webfont.woff', woff,
+		'oswald/Oswald-Light-webfont.ttf', truetype),
+	'oswald/Oswald-Light-webfont.eot',
+	normal,
+	normal
+);
+
+@include font-face (
+	'LatoRegular',
+	font-files(
+		'lato/Lato-Reg-webfont.svg#LatoRegular', svg,
+		'lato/Lato-Reg-webfont.woff', woff,
+		'lato/Lato-Reg-webfont.ttf', truetype),
+	'lato/Lato-Reg-webfont.eot',
+	normal,
+	normal
+);
+
+@include font-face (
+	'LatoBold',
+	font-files(
+		'lato/Lato-Bol-webfont.svg#LatoBold', svg,
+		'lato/Lato-Bol-webfont.woff', woff,
+		'lato/Lato-Bol-webfont.ttf', truetype),
+	'lato/Lato-Bol-webfont.eot',
+	normal,
+	normal
+);
+
+@include font-face (
+	'LatoItalic',
+	font-files(
+		'lato/Lato-RegIta-webfont.svg#LatoItalic', svg,
+		'lato/Lato-RegIta-webfont.woff', woff,
+		'lato/Lato-RegIta-webfont.ttf', truetype),
+	'lato/Lato-RegIta-webfont.eot',
+	normal,
+	normal
+);
+
+@mixin ff-text {
+	font-family: 'LatoRegular', $arial; // Basic & global font
+}
+
+@mixin ff-heading {
+	font-family: 'OswaldLight', $arial; // Font only for all heading eg. h1, h2 etc
+}
+
+@mixin ff-lato-bold {
+	font-family: 'LatoBold', $arial;
+}
+
+@mixin ff-lato-italic {
+	font-family: 'LatoItalic', $arial;
+}
+
+@mixin ff-decorative{
+	font-family: $cursive; 
+}
+
+@mixin ff-mono{
+	font-family: $monospace;
+}

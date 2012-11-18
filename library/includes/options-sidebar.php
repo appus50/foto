@@ -15,9 +15,16 @@ function foto_options_sidebar() { ?>
 			<div id="foto-themes" class="postbox">
 				<h3 class="hndle"><span><?php _e('Recommended Theme', 'foto'); ?></span></h3>
 				<div class="inside">
-					<p><strong>Rumput Hijau</strong></p>
-					<a href="http://satrya.me/rumput-hijau-wordpress-theme/" title="Download now!" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/rumput-hijau.png"></a>
-					<p>Responsive, clean and search engine friendly WordPress theme.<br><a href="http://satrya.me/rumput-hijau-wordpress-theme/" title="Download now!" target="_blank">Get it for free! &rarr;</a></p>
+					<p><strong>Tiga Theme</strong></p>
+					<a href="http://satrya.me/tiga-wordpress-theme/" title="Download now!" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/tiga.png"></a>
+					<p>Multidevice layout, optimized for mobile browsing and super clean blogging WordPress theme, perfect for you who wants focused on the content.<br><a href="http://satrya.me/tiga-wordpress-theme/" title="Download now!" target="_blank">Get it for free! &rarr;</a></p>
+				</div>
+			</div>
+
+			<div id="foto-rating" class="postbox">
+				<h3 class="hndle"><span><?php _e('Give Foto Theme 5 Star Rating', 'foto'); ?></span></h3>
+				<div class="inside">
+					<p><?php _e('If you love foto theme, please give 5 star rating at WordPress directory. <a href="http://wordpress.org/extend/themes/foto" target="_blank">Give 5 star rating &rarr;</a>', 'foto'); ?></p>
 				</div>
 			</div>
 			

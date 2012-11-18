@@ -2,7 +2,7 @@
 Theme Name:		Foto
 Theme URI:  	http://satrya.me/foto-wordpress-theme
 Description: 	Photo blogging theme with beautiful and modern look. Enjoy it!
-Version: 		0.0.2
+Version: 		0.0.4
 Author: 		Satrya
 Author URI:		http://satrya.me
 Tags: 			gray, white, light, two-columns, right-sidebar, fixed-width, custom-background, custom-menu, sticky-post, full-width-template, theme-options, threaded-comments, translation-ready
@@ -2100,7 +2100,7 @@ Collection of styles for theme plugins
 
 .rslides_tabs {
   left: 50%;
-  margin-top: 20px;
+  margin: 20px 0 0 -20px;
   padding: 0;
   position: absolute;
   text-align: center;
