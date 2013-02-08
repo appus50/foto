@@ -1,4 +1,3 @@
-.sass-cache/*
-.thumbs.db
+.sass-cache
 sass
 config.rb
