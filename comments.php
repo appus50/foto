@@ -61,7 +61,8 @@
 
 		<?php
 		$args = array(
-			'label_submit' => __('Send your comment', 'foto')
+			'label_submit' => __( 'Send your comment', 'foto' ),
+			'comment_notes_after' => ''
 		);
 			
 		comment_form($args); 

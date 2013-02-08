@@ -1,0 +1,756 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Foto 1.0\n"
+"POT-Creation-Date: 2013-02-08 22:45+0700\n"
+"PO-Revision-Date: 2013-02-08 22:45+0700\n"
+"Last-Translator: M.Satrya <satrya@tokokoo.com>\n"
+"Language-Team: Satrya <satrya@satrya.me>\n"
+"Language: English\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.5\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;esc_attr__;esc_attr_e;esc_html__;"
+"esc_html_e\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../404.php:18
+msgid "Oops! That page can&rsquo;t be found"
+msgstr ""
+
+#: ../404.php:22
+msgid ""
+"It looks like nothing was found at this location. Maybe try you can try to "
+"search ?"
+msgstr ""
+
+#: ../comments.php:32
+#, php-format
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../comments.php:59
+msgid "Comments are closed."
+msgstr ""
+
+#: ../comments.php:64
+msgid "Send your comment"
+msgstr ""
+
+#: ../content-image.php:60 ../content-page.php:14 ../content-single.php:31
+msgid "Pages:"
+msgstr ""
+
+#: ../content-image.php:71
+msgid "Image Information"
+msgstr ""
+
+#: ../content-image.php:79
+msgid "Full Size"
+msgstr ""
+
+#: ../content-image.php:86
+msgid "Aperture"
+msgstr ""
+
+#: ../content-image.php:94
+msgid "Focal Length"
+msgstr ""
+
+#: ../content-image.php:96
+msgid "mm"
+msgstr ""
+
+#: ../content-image.php:102
+msgid "ISO"
+msgstr ""
+
+#: ../content-image.php:110
+msgid "Shutter"
+msgstr ""
+
+#: ../content-image.php:129
+msgid "Camera:"
+msgstr ""
+
+#: ../content-image.php:144
+msgid "&larr; Previous"
+msgstr ""
+
+#: ../content-image.php:145
+msgid "Next &rarr;"
+msgstr ""
+
+#: ../content-page.php:15 ../library/includes/templates.php:167
+#: ../library/includes/templates.php:251 ../library/includes/templates.php:279
+msgid "Edit"
+msgstr ""
+
+#: ../content-single.php:23
+msgid "Large Image"
+msgstr ""
+
+#: ../content-single.php:29
+msgid "Description"
+msgstr ""
+
+#: ../content-single.php:46
+msgid "Entry Meta"
+msgstr ""
+
+#: ../content.php:24 ../library/includes/templates.php:24
+#: ../library/includes/templates.php:124
+#, php-format
+msgid "Permalink to %s"
+msgstr ""
+
+#: ../footer.php:24
+#, php-format
+msgid ""
+"Powered by <a href=\"http://wordpress.org/\" title=\"%1$s\" rel=\"generator"
+"\">%2$s</a> &middot; Theme by <a href=\"http://satrya.me/\" title=\"%3$s\" "
+"rel=\"designer\">%4$s</a>"
+msgstr ""
+
+#: ../header.php:53 ../header.php:55
+msgid "Subscribe our rss feed"
+msgstr ""
+
+#: ../header.php:53 ../header.php:55
+msgid "Rss Feed"
+msgstr ""
+
+#: ../header.php:59
+msgid "Add me to your circle"
+msgstr ""
+
+#: ../header.php:59 ../library/includes/options.php:149
+msgid "Google Plus"
+msgstr ""
+
+#: ../header.php:61
+msgid "Add me as your friend"
+msgstr ""
+
+#: ../header.php:61 ../library/includes/options.php:143
+msgid "Facebook"
+msgstr ""
+
+#: ../header.php:63
+msgid "Follow Me"
+msgstr ""
+
+#: ../header.php:63 ../library/includes/options.php:137
+msgid "Twitter"
+msgstr ""
+
+#: ../no-results.php:14
+msgid "Nothing Found"
+msgstr ""
+
+#: ../no-results.php:20
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: ../no-results.php:24
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: ../no-results.php:29
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+
+#: ../searchform.php:11 ../searchform.php:13
+msgid "Search"
+msgstr ""
+
+#: ../searchform.php:12
+msgid "Search &hellip;"
+msgstr ""
+
+#: ../library/admin/options-framework.php:170
+msgid "Foto Theme Options"
+msgstr ""
+
+#: ../library/admin/options-framework.php:237
+msgid "Save Options"
+msgstr ""
+
+#: ../library/admin/options-framework.php:238
+msgid "Restore Defaults"
+msgstr ""
+
+#: ../library/admin/options-framework.php:238
+msgid "Click OK to reset. Any theme settings will be lost!"
+msgstr ""
+
+#: ../library/admin/options-framework.php:270
+msgid "Default options restored."
+msgstr ""
+
+#: ../library/admin/options-framework.php:313
+msgid "Options saved."
+msgstr ""
+
+#: ../library/admin/options-framework.php:364
+msgid "Theme Options"
+msgstr ""
+
+#: ../library/admin/options-medialibrary-uploader.php:26
+msgid "Theme Options Media"
+msgstr ""
+
+#: ../library/admin/options-medialibrary-uploader.php:129
+msgid "Upload"
+msgstr ""
+
+#: ../library/admin/options-medialibrary-uploader.php:152
+msgid "View File"
+msgstr ""
+
+#: ../library/admin/options-medialibrary-uploader.php:289
+msgid "Gallery"
+msgstr ""
+
+#: ../library/admin/options-medialibrary-uploader.php:289
+msgid "Previously Uploaded"
+msgstr ""
+
+#: ../library/admin/options-sanitize.php:232
+msgid "No Repeat"
+msgstr ""
+
+#: ../library/admin/options-sanitize.php:233
+msgid "Repeat Horizontally"
+msgstr ""
+
+#: ../library/admin/options-sanitize.php:234
+msgid "Repeat Vertically"
+msgstr ""
+
+#: ../library/admin/options-sanitize.php:235
+msgid "Repeat All"
+msgstr ""
+
+#: ../library/admin/options-sanitize.php:248
+msgid "Top Left"
+msgstr ""
+
+#: ../library/admin/options-sanitize.php:249
+msgid "Top Center"
+msgstr ""
+
+#: ../library/admin/options-sanitize.php:250
+msgid "Top Right"
+msgstr ""
+
+#: ../library/admin/options-sanitize.php:251
+msgid "Middle Left"
+msgstr ""
+
+#: ../library/admin/options-sanitize.php:252
+msgid "Middle Center"
+msgstr ""
+
+#: ../library/admin/options-sanitize.php:253
+msgid "Middle Right"
+msgstr ""
+
+#: ../library/admin/options-sanitize.php:254
+msgid "Bottom Left"
+msgstr ""
+
+#: ../library/admin/options-sanitize.php:255
+msgid "Bottom Center"
+msgstr ""
+
+#: ../library/admin/options-sanitize.php:256
+msgid "Bottom Right"
+msgstr ""
+
+#: ../library/admin/options-sanitize.php:269
+msgid "Scroll Normally"
+msgstr ""
+
+#: ../library/admin/options-sanitize.php:270
+msgid "Fixed in Place"
+msgstr ""
+
+#: ../library/admin/options-sanitize.php:344
+msgid "Normal"
+msgstr ""
+
+#: ../library/admin/options-sanitize.php:345
+msgid "Italic"
+msgstr ""
+
+#: ../library/admin/options-sanitize.php:346
+msgid "Bold"
+msgstr ""
+
+#: ../library/admin/options-sanitize.php:347
+msgid "Bold Italic"
+msgstr ""
+
+#: ../library/includes/extensions.php:72 ../library/includes/extensions.php:74
+msgid "Category Archive: "
+msgstr ""
+
+#: ../library/includes/extensions.php:98
+#, php-format
+msgid "Posts Published in: %s"
+msgstr ""
+
+#: ../library/includes/extensions.php:150
+msgid "Search Results:"
+msgstr ""
+
+#: ../library/includes/extensions.php:155
+msgid "Tag Archive:"
+msgstr ""
+
+#: ../library/includes/extensions.php:160
+msgid "Posts Written by:"
+msgstr ""
+
+#: ../library/includes/extensions.php:165
+msgid "Error 404:"
+msgstr ""
+
+#: ../library/includes/extensions.php:166
+msgid "Page Not Found"
+msgstr ""
+
+#: ../library/includes/extensions.php:170
+msgid "Post Format Archive:"
+msgstr ""
+
+#: ../library/includes/extensions.php:214
+msgid "Display your recent tweets to your readers."
+msgstr ""
+
+#: ../library/includes/extensions.php:215
+msgid "&raquo; Foto Twitter Widget"
+msgstr ""
+
+#: ../library/includes/extensions.php:227
+#: ../library/includes/extensions.php:335
+msgid "Title:"
+msgstr ""
+
+#: ../library/includes/extensions.php:232
+msgid "Twitter Username:"
+msgstr ""
+
+#: ../library/includes/extensions.php:238
+msgid "Number of Tweets to Retrieve:"
+msgstr ""
+
+#: ../library/includes/extensions.php:334
+#, php-format
+msgid ""
+"Please complete your bio information on the <a href=\"%s\">Profile Page</a> "
+"<em>(fill the nickname, twitter and Biographical Info)</em>"
+msgstr ""
+
+#: ../library/includes/extensions.php:351 ../library/includes/options.php:127
+msgid "Social"
+msgstr ""
+
+#: ../library/includes/filters.php:36
+msgid "Search Results for:"
+msgstr ""
+
+#: ../library/includes/filters.php:40
+msgid "Category Archives:"
+msgstr ""
+
+#: ../library/includes/filters.php:44
+msgid "Tag Archives:"
+msgstr ""
+
+#: ../library/includes/filters.php:48
+msgid "Not Found"
+msgstr ""
+
+#: ../library/includes/filters.php:171
+msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: ../library/includes/options-sidebar.php:16
+msgid "Recommended Theme"
+msgstr ""
+
+#: ../library/includes/options-sidebar.php:25
+msgid "Give Foto Theme 5 Star Rating"
+msgstr ""
+
+#: ../library/includes/options-sidebar.php:27
+msgid ""
+"If you love foto theme, please give 5 star rating at WordPress directory. <a "
+"href=\"http://wordpress.org/extend/themes/foto\" target=\"_blank\">Give 5 "
+"star rating &rarr;</a>"
+msgstr ""
+
+#: ../library/includes/options-sidebar.php:32
+msgid "Support & Contribute"
+msgstr ""
+
+#: ../library/includes/options-sidebar.php:34
+msgid ""
+"Need a support? Or you want to submit a translation. Create a ticket <a href="
+"\"http://www.themephe.com/tickets/\" target=\"_blank\">here</a> or you can "
+"<a href=\"http://twitter.com/msattt\" target=\"_blank\">follow me @msattt</a>"
+msgstr ""
+
+#: ../library/includes/options.php:38
+msgid "Single post"
+msgstr ""
+
+#: ../library/includes/options.php:39
+msgid "Page"
+msgstr ""
+
+#: ../library/includes/options.php:40
+msgid "Both"
+msgstr ""
+
+#: ../library/includes/options.php:41
+msgid "None"
+msgstr ""
+
+#: ../library/includes/options.php:45
+msgid "Two"
+msgstr ""
+
+#: ../library/includes/options.php:46
+msgid "Three"
+msgstr ""
+
+#: ../library/includes/options.php:47
+msgid "Four"
+msgstr ""
+
+#: ../library/includes/options.php:48
+msgid "Five"
+msgstr ""
+
+#: ../library/includes/options.php:49
+msgid "Six"
+msgstr ""
+
+#: ../library/includes/options.php:50
+msgid "Seven"
+msgstr ""
+
+#: ../library/includes/options.php:51
+msgid "Eight"
+msgstr ""
+
+#: ../library/includes/options.php:52
+msgid "Nine"
+msgstr ""
+
+#: ../library/includes/options.php:53
+msgid "Ten"
+msgstr ""
+
+#: ../library/includes/options.php:59
+msgid "General"
+msgstr ""
+
+#: ../library/includes/options.php:63
+msgid "Custom Logo"
+msgstr ""
+
+#: ../library/includes/options.php:64
+msgid ""
+"Upload a logo for your website, or specify the image address of your online "
+"logo. Recommended size is 300x100"
+msgstr ""
+
+#: ../library/includes/options.php:69
+msgid "Custom Favicon"
+msgstr ""
+
+#: ../library/includes/options.php:70
+msgid ""
+"Upload a favicon for your website, or specify the image address of your "
+"online favicon. Recommended size is 16x16"
+msgstr ""
+
+#: ../library/includes/options.php:75
+msgid "Custom CSS"
+msgstr ""
+
+#: ../library/includes/options.php:76
+msgid "Quickly add some CSS rules to your theme by adding it to this box."
+msgstr ""
+
+#: ../library/includes/options.php:82
+msgid "Analytic Code"
+msgstr ""
+
+#: ../library/includes/options.php:83
+msgid ""
+"Paste your Google Analytics (or other) tracking code here. It will be "
+"inserted before the closing body tag of your theme."
+msgstr ""
+
+#: ../library/includes/options.php:90
+msgid "Theme"
+msgstr ""
+
+#: ../library/includes/options.php:94
+msgid "Welcome Text"
+msgstr ""
+
+#: ../library/includes/options.php:95
+msgid "Put your welcome text here, it only visible on home page"
+msgstr ""
+
+#: ../library/includes/options.php:101
+msgid "Custom background"
+msgstr ""
+
+#: ../library/includes/options.php:102
+msgid "Customize your background"
+msgstr ""
+
+#: ../library/includes/options.php:109
+msgid "Featured posts slider"
+msgstr ""
+
+#: ../library/includes/options.php:110
+msgid ""
+"Check this option to show featured posts on home page. Featured posts is "
+"based on sticky post. To show the featured posts, you only need create a "
+"post then check the sticky post option."
+msgstr ""
+
+#: ../library/includes/options.php:116
+msgid "Select a number of featured posts"
+msgstr ""
+
+#: ../library/includes/options.php:117
+msgid "How many featured posts you want to show ?"
+msgstr ""
+
+#: ../library/includes/options.php:131
+msgid "Custom RSS Feed"
+msgstr ""
+
+#: ../library/includes/options.php:132
+msgid "You can put the feedburner link here"
+msgstr ""
+
+#: ../library/includes/options.php:138
+msgid "Twitter url. ex: http://twitter.com/yourusername"
+msgstr ""
+
+#: ../library/includes/options.php:144
+msgid "Facebook url. ex: http://www.facebook.com/yourusername"
+msgstr ""
+
+#: ../library/includes/options.php:150
+msgid "Google plus url. ex: https://plus.google.com/u/109253446701726260861"
+msgstr ""
+
+#: ../library/includes/setup.php:35
+msgid "Footer Navigation"
+msgstr ""
+
+#: ../library/includes/templates.php:22
+#, php-format
+msgid "<a href=\"%1$s\" title=\"%2$s\" rel=\"bookmark\">%3$s</a>"
+msgstr ""
+
+#: ../library/includes/templates.php:33
+#, php-format
+msgid "Author Archives: %s"
+msgstr ""
+
+#: ../library/includes/templates.php:41
+msgid "404 Not Found"
+msgstr ""
+
+#: ../library/includes/templates.php:44
+#, php-format
+msgid "Search Results for: %s"
+msgstr ""
+
+#: ../library/includes/templates.php:47
+#, php-format
+msgid "Category Archives: %s"
+msgstr ""
+
+#: ../library/includes/templates.php:50
+#, php-format
+msgid "Tag Archives: %s"
+msgstr ""
+
+#: ../library/includes/templates.php:53
+#, php-format
+msgid "Daily Archives: %s"
+msgstr ""
+
+#: ../library/includes/templates.php:56
+#, php-format
+msgid "Monthly Archives: %s"
+msgstr ""
+
+#: ../library/includes/templates.php:59
+#, php-format
+msgid "Yearly Archives: %s"
+msgstr ""
+
+#: ../library/includes/templates.php:62
+msgid "Archives"
+msgstr ""
+
+#: ../library/includes/templates.php:84
+msgid "Post navigation"
+msgstr ""
+
+#: ../library/includes/templates.php:88
+msgctxt "Previous post link"
+msgid "&larr;"
+msgstr ""
+
+#: ../library/includes/templates.php:89
+msgctxt "Next post link"
+msgid "&rarr;"
+msgstr ""
+
+#: ../library/includes/templates.php:95
+msgid "Older"
+msgstr ""
+
+#: ../library/includes/templates.php:99
+msgid "Newer "
+msgstr ""
+
+#: ../library/includes/templates.php:122
+msgid "Post view"
+msgstr ""
+
+#: ../library/includes/templates.php:124
+msgid "Permalink"
+msgstr ""
+
+#: ../library/includes/templates.php:141
+msgid "Author"
+msgstr ""
+
+#: ../library/includes/templates.php:143
+#, php-format
+msgid "View all posts by %s"
+msgstr ""
+
+#: ../library/includes/templates.php:146
+msgid "Published"
+msgstr ""
+
+#: ../library/includes/templates.php:151
+msgid "Category"
+msgstr ""
+
+#: ../library/includes/templates.php:155
+#, php-format
+msgid "<span class=\"%1$s category\">%2$s</span>"
+msgstr ""
+
+#: ../library/includes/templates.php:159
+msgid "Tagged"
+msgstr ""
+
+#: ../library/includes/templates.php:163
+#, php-format
+msgid "<span class=\"%1$s\">%2$s</span>"
+msgstr ""
+
+#: ../library/includes/templates.php:190
+msgid "0 View"
+msgstr ""
+
+#: ../library/includes/templates.php:192
+msgid " Views"
+msgstr ""
+
+#: ../library/includes/templates.php:213
+msgid "Views"
+msgstr ""
+
+#: ../library/includes/templates.php:251
+msgid "Pingback:"
+msgstr ""
+
+#: ../library/includes/templates.php:268
+#, php-format
+msgid "%1$s on %2$s <span class=\"says\">said:</span>"
+msgstr ""
+
+#: ../library/includes/templates.php:274
+#, php-format
+msgid "%1$s at %2$s"
+msgstr ""
+
+#: ../library/includes/templates.php:281
+msgid "Reply <span>&darr;</span>"
+msgstr ""
+
+#: ../library/includes/templates.php:285
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: ../library/includes/templates.php:328
+msgid "Comment navigation"
+msgstr ""
+
+#: ../library/includes/templates.php:329
+msgid "&larr; Older Comments"
+msgstr ""
+
+#: ../library/includes/templates.php:330
+msgid "Newer Comments &rarr;"
+msgstr ""
+
+#: ../library/includes/widgets.php:17
+msgid "Home Widget"
+msgstr ""
+
+#: ../library/includes/widgets.php:18
+msgid "This sidebar appears on the right side of your site on home page"
+msgstr ""
+
+#: ../library/includes/widgets.php:26
+msgid "Footer Left Widget"
+msgstr ""
+
+#: ../library/includes/widgets.php:27 ../library/includes/widgets.php:36
+#: ../library/includes/widgets.php:45 ../library/includes/widgets.php:54
+msgid "This sidebar appears on the footer of your site"
+msgstr ""
+
+#: ../library/includes/widgets.php:35
+msgid "Footer Center Widget"
+msgstr ""
+
+#: ../library/includes/widgets.php:44
+msgid "Footer Right Widget"
+msgstr ""
+
+#: ../library/includes/widgets.php:53
+msgid "Page Widget"
+msgstr ""

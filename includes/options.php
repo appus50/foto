@@ -26,14 +26,6 @@ function optionsframework_option_name() {
 
 function optionsframework_options() {
 	
-	$background = array(
-		'color' => '',
-		'image' => '',
-		'repeat' => 'repeat',
-		'position' => 'top center',
-		'attachment'=>'scroll' 
-	);
-	
 	$social = array(
 		'foto_post' => __('Single post', 'foto'),
 		'foto_page' => __('Page', 'foto'),
@@ -96,14 +88,6 @@ function optionsframework_options() {
 		'std' => 'Hi! Welcome to my personal photo site. This is just a place for me to share my photos. I hope you&rsquo;t ll enjoy it.',
 		'id' => 'foto_welcome_text',
 		'type' => 'textarea');
-		
-	$options[] = array(
-		'name' =>  __('Custom background', 'foto'),
-		'desc' => __('Customize your background', 'foto'),
-		'id' => 'foto_custom_bg',
-		'std' => $background,
-		'type' => 'background' 
-	);
 	
 	$options[] = array( 
 		'name' => __('Featured posts slider', 'foto'),

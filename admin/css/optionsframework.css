@@ -1,18 +1,13 @@
-/*-------------------------------------------------------------------------------------------*/
 /* Options Framework Admin Styles */
-/*-------------------------------------------------------------------------------------------*/
 
 .updated {
 	max-width:764px;
 	margin-bottom:0px !important;
 }
 #optionsframework {
-	display: inline;
-	float: left;
 	position:relative;
 	z-index: 0;
-	width:780px;
-	margin-right: 20px;
+	max-width:780px;
 	background:#fff;
 }
 #optionsframework h3 {
@@ -53,11 +48,7 @@
 #optionsframework .section-checkbox .explain {
 	max-width:94%;
 }
-#optionsframework .section-color .controls {
-	min-width:125px;
-	width:125px
-}
-#optionsframework .controls input, #optionsframework .controls select, #optionsframework .controls textarea {
+#optionsframework .controls select, #optionsframework .controls textarea {
 	margin-bottom:10px;
 	width:100%;
 }
@@ -73,15 +64,16 @@
 	float:left;
 	clear:both;
 }
-#optionsframework .controls .of-color {
-	float:left;
-	width: 80px;
-	margin-left:5px;
-	margin-right:5px;
+#optionsframework .section-typography .controls {
+	float:none;
+	width:auto;
+}
+#optionsframework .section-typography .explain {
+	float:none;
+	width:auto;
 }
 #optionsframework .controls .of-typography-size {
 	width:80px;
-	margin-left:5px;
 	float:left
 }
 #optionsframework .controls .of-typography-unit {
@@ -119,8 +111,8 @@
 	margin-right:5px;
 	float:left
 }
-#optionsframework div.section-background .controls input.upload {
-	width:47%;
+#optionsframework .section-background .wp-picker-container {
+	margin-bottom:10px;
 }
 #optionsframework .controls .of-radio-img-img {
 	border:3px solid #f9f9f9;
@@ -176,10 +168,8 @@
 }
 #optionsframework .controls input.upload_button {
 	float:right;
-	width:45px;
 	border-color:#BBBBBB;
 	cursor:pointer;
-	height:16px;
 }
 #optionsframework .controls input.upload_button:hover {
 	border-color:#666666;
@@ -237,27 +227,10 @@
 #optionsframework .button-primary {
 	float:right;
 }
-
-/* Bottom Section */
-
-#optionsframework .section:before, #optionsframework .section:after {
+#optionsframework .section:after {
 	content: "";
 	display: table;
 }
 #optionsframework .section:after {
 	clear: both;
-}
-
-.admin-side {
-	display: inline;
-	float: right;
-	width: 280px;
-}
-
-.admin-side a {
-	text-decoration: none;
-}
-
-#wpbody-content .admin-side .metabox-holder {
-	padding-top: 0;
 }

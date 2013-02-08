@@ -1,3 +1,10 @@
+1.0 - 09 Feb 2013
+- WordPress 3.5 compatibility
+- Update language
+- Support WordPress core custom background
+- Remove @font-face, changed it with google fonts
+- Update outdated scripts
+
 0.0.4 - 23 July 2012
 - Fix footer menu bug
 - Fix rss feed link in header
