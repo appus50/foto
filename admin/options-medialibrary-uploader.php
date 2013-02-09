@@ -23,7 +23,7 @@ if ( ! function_exists( 'optionsframework_mlu_init' ) ) :
 function optionsframework_mlu_init () {
 	register_post_type( 'optionsframework', array(
 		'labels' => array(
-			'name' => __( 'Theme Options Media', 'tiga' ),
+			'name' => __( 'Theme Options Media', 'foto' ),
 		),
 		'public' => true,
 		'show_ui' => false,
@@ -123,7 +123,7 @@ function optionsframework_medialibrary_uploader( $_id, $_value, $_mode = 'full',
 	
 	if ( $value ) { $class = ' has-file'; }
 	$output .= '<input id="' . $id . '" class="upload' . $class . '" type="text" name="'.$name.'" value="' . $value . '" />' . "\n";
-	$output .= '<input id="upload_' . $id . '" class="upload_button button" type="button" value="' . __( 'Upload', 'tiga' ) . '" rel="' . $int . '" />' . "\n";
+	$output .= '<input id="upload_' . $id . '" class="upload_button button" type="button" value="' . __( 'Upload', 'foto' ) . '" rel="' . $int . '" />' . "\n";
 	
 	if ( $_desc != '' ) {
 		$output .= '<span class="of_metabox_desc">' . $_desc . '</span>' . "\n";
@@ -146,7 +146,7 @@ function optionsframework_medialibrary_uploader( $_id, $_value, $_mode = 'full',
 			$output .= '';
 		
 			// Standard generic output if it's not an image.	
-			$title = __( 'View File', 'tiga' );
+			$title = __( 'View File', 'foto' );
 			$output .= '<div class="no_image"><span class="file_link"><a href="' . $value . '" target="_blank" rel="external">'.$title.'</a></span>' . $remove . '</div>';
 		}	
 	}
@@ -279,7 +279,7 @@ endif;
 if ( ! function_exists( 'optionsframework_mlu_modify_tabs' ) ) :
 
 function optionsframework_mlu_modify_tabs ( $tabs ) {
-	$tabs['gallery'] = str_replace( __( 'Gallery', 'tiga' ), __( 'Previously Uploaded', 'tiga' ), $tabs['gallery'] );
+	$tabs['gallery'] = str_replace( __( 'Gallery', 'foto' ), __( 'Previously Uploaded', 'foto' ), $tabs['gallery'] );
 	return $tabs;
 }
 

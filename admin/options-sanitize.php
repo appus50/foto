@@ -229,10 +229,10 @@ add_filter( 'of_font_face', 'of_sanitize_font_face' );
  */
 function of_recognized_background_repeat() {
 	$default = array(
-		'no-repeat' => __('No Repeat', 'tiga'),
-		'repeat-x'  => __('Repeat Horizontally', 'tiga'),
-		'repeat-y'  => __('Repeat Vertically', 'tiga'),
-		'repeat'    => __('Repeat All', 'tiga'),
+		'no-repeat' => __('No Repeat', 'foto'),
+		'repeat-x'  => __('Repeat Horizontally', 'foto'),
+		'repeat-y'  => __('Repeat Vertically', 'foto'),
+		'repeat'    => __('Repeat All', 'foto'),
 		);
 	return apply_filters( 'of_recognized_background_repeat', $default );
 }
@@ -245,15 +245,15 @@ function of_recognized_background_repeat() {
  */
 function of_recognized_background_position() {
 	$default = array(
-		'top left'      => __('Top Left', 'tiga'),
-		'top center'    => __('Top Center', 'tiga'),
-		'top right'     => __('Top Right', 'tiga'),
-		'center left'   => __('Middle Left', 'tiga'),
-		'center center' => __('Middle Center', 'tiga'),
-		'center right'  => __('Middle Right', 'tiga'),
-		'bottom left'   => __('Bottom Left', 'tiga'),
-		'bottom center' => __('Bottom Center', 'tiga'),
-		'bottom right'  => __('Bottom Right', 'tiga')
+		'top left'      => __('Top Left', 'foto'),
+		'top center'    => __('Top Center', 'foto'),
+		'top right'     => __('Top Right', 'foto'),
+		'center left'   => __('Middle Left', 'foto'),
+		'center center' => __('Middle Center', 'foto'),
+		'center right'  => __('Middle Right', 'foto'),
+		'bottom left'   => __('Bottom Left', 'foto'),
+		'bottom center' => __('Bottom Center', 'foto'),
+		'bottom right'  => __('Bottom Right', 'foto')
 		);
 	return apply_filters( 'of_recognized_background_position', $default );
 }
@@ -266,8 +266,8 @@ function of_recognized_background_position() {
  */
 function of_recognized_background_attachment() {
 	$default = array(
-		'scroll' => __('Scroll Normally', 'tiga'),
-		'fixed'  => __('Fixed in Place', 'tiga')
+		'scroll' => __('Scroll Normally', 'foto'),
+		'fixed'  => __('Fixed in Place', 'foto')
 		);
 	return apply_filters( 'of_recognized_background_attachment', $default );
 }
@@ -341,10 +341,10 @@ function of_recognized_font_faces() {
  */
 function of_recognized_font_styles() {
 	$default = array(
-		'normal'      => __('Normal', 'tiga'),
-		'italic'      => __('Italic', 'tiga'),
-		'bold'        => __('Bold', 'tiga'),
-		'bold italic' => __('Bold Italic', 'tiga')
+		'normal'      => __('Normal', 'foto'),
+		'italic'      => __('Italic', 'foto'),
+		'bold'        => __('Bold', 'foto'),
+		'bold italic' => __('Bold Italic', 'foto')
 		);
 	return apply_filters( 'of_recognized_font_styles', $default );
 }
