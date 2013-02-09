@@ -2081,6 +2081,7 @@ Collection of styles for theme plugins
   top: 50%;
   width: 38px;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  z-index: 9;
 }
 .rslides1_nav:focus {
   outline: none;
