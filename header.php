@@ -1,22 +1,24 @@
 <?php
 /**
- * The header template.
- *
- * Display all of the header contents.
+ * Header Template Part
+ * 
+ * Template part file that contains the HTML document head and 
+ * opening HTML body elements, as well as the site header
  *
  * @package foto
- * @since foto 0.0.1
+ * @author	Satrya
+ * @license	license.txt
+ * @since 	0.0.1
+ *
  */
 ?>
 <!DOCTYPE html>
-<!--[if IE 7 ]>    <html class="no-js ie ie7" <?php language_attributes(); ?>> <![endif]-->
-<!--[if IE 8 ]>    <html class="no-js ie ie8" <?php language_attributes(); ?>> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" <?php language_attributes(); ?>> <!--<![endif]-->
+<!--[if IE 8 ]>    <html class="ie ie8" <?php language_attributes(); ?>> <![endif]-->
+<!--[if gt IE 8]><!--> <html <?php language_attributes(); ?>> <!--<![endif]-->
 <head>
 
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
 
 <title><?php wp_title(); ?></title>
 
@@ -52,17 +54,17 @@
 		<div class="header-right-area col-16 last">
 			<div class="site-social col-10">
 				<?php if( of_get_option('foto_rss_custom') ) { ?>
-					<span class="feed"><a href="<?php echo esc_url( of_get_option('foto_rss_custom') ); ?>" title="<?php _e('Subscribe our rss feed', 'foto'); ?>"><?php _e('Rss Feed', 'foto'); ?></a></span>
+					<span class="feed"><a href="<?php echo esc_url( of_get_option('foto_rss_custom') ); ?>" title="<?php esc_attr_e('Subscribe our rss feed', 'foto'); ?>"><?php _e('Rss Feed', 'foto'); ?></a></span>
 				<?php } else { ?>
-					<span class="feed"><a href="<?php echo get_feed_link( 'rss2' ); ?>" title="<?php _e('Subscribe our rss feed', 'foto'); ?>"><?php _e('Rss Feed', 'foto'); ?></a></span>
+					<span class="feed"><a href="<?php echo get_feed_link( 'rss2' ); ?>" title="<?php esc_attr_e('Subscribe our rss feed', 'foto'); ?>"><?php _e('Rss Feed', 'foto'); ?></a></span>
 				<?php }
 				
 				if( of_get_option('foto_gplus_username') ) { ?>
-					<span class="gplus"><a href="<?php echo esc_url( of_get_option('foto_gplus_username') ); ?>" title="<?php _e('Add me to your circle', 'foto'); ?>"><?php _e('Google Plus', 'foto'); ?></a></span>
+					<span class="gplus"><a href="<?php echo esc_url( of_get_option('foto_gplus_username') ); ?>" title="<?php esc_attr_e('Add me to your circle', 'foto'); ?>"><?php _e('Google Plus', 'foto'); ?></a></span>
 				<?php } if( of_get_option('foto_fb_username') ) { ?>
-					<span class="fb"><a href="<?php echo esc_url( of_get_option('foto_fb_username') ); ?>" title="<?php _e('Add me as your friend', 'foto'); ?>"><?php _e('Facebook', 'foto'); ?></a></span>
+					<span class="fb"><a href="<?php echo esc_url( of_get_option('foto_fb_username') ); ?>" title="<?php esc_attr_e('Add me as your friend', 'foto'); ?>"><?php _e('Facebook', 'foto'); ?></a></span>
 				<?php } if( of_get_option('foto_twitter_username') ) { ?>
-					<span class="tw"><a href="<?php echo esc_url( of_get_option('foto_twitter_username') ); ?>" title="<?php _e('Follow Me', 'foto'); ?>"><?php _e('Twitter', 'foto'); ?></a></span>
+					<span class="tw"><a href="<?php echo esc_url( of_get_option('foto_twitter_username') ); ?>" title="<?php esc_attr_e('Follow Me', 'foto'); ?>"><?php _e('Twitter', 'foto'); ?></a></span>
 				<?php } ?>
 			</div><!-- end .site-social -->
 			

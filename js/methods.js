@@ -21,5 +21,3 @@ $j(document).ready(function(){
 	});
 	
 });
-
-

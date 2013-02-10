@@ -1,9 +1,14 @@
 <?php
 /**
- * foto functions and definitions
+ * Theme functions file
+ *
+ * Contains all of the Theme's setup functions, custom functions,
+ * custom hooks and Theme settings.
  *
  * @package foto
- * @since foto 0.0.1
+ * @author	Satrya
+ * @license	license.txt
+ * @since 	0.0.1
  */
 
 /* Loads the Options Settings. */
@@ -73,8 +78,6 @@ function foto_enqueue_scripts() {
 	wp_enqueue_style( 'foto-style', get_stylesheet_uri(), false, '1.0', 'all' );
 
 	wp_enqueue_script( 'jquery' );
-	
-	wp_enqueue_script( 'foto-modernizr', get_template_directory_uri() . '/js/vendor/modernizr-2.6.2.min.js', array( 'jquery' ), '2.6.2' );
 
 	if ( is_singular() && wp_attachment_is_image( $post->ID ) ) {
 		wp_enqueue_script( 'foto-keyboard-image-navigation', get_template_directory_uri() . '/js/vendor/keyboard-image-navigation.js', array( 'jquery' ), '1.0' );
