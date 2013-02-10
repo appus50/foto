@@ -1,7 +1,8 @@
 1.1 - 
-- Dropping support for IE7
+- Dropping support for IE7 & Mozilla 3..
 - Remove modernizr
 - Add HTML5 Shiv script
+- Sidebar style
 
 1.0 - 09 Feb 2013
 - WordPress 3.5 compatibility

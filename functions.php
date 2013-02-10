@@ -75,7 +75,7 @@ function foto_enqueue_scripts() {
 
 	wp_enqueue_style( 'foto-fonts', 'http://fonts.googleapis.com/css?family=Lato:400,700,400italic|Oswald:300', '', '1.0', 'all' );
 
-	wp_enqueue_style( 'foto-style', get_stylesheet_uri(), false, '1.0', 'all' );
+	wp_enqueue_style( 'foto-style', get_stylesheet_uri(), false, '1.1', 'all' );
 
 	wp_enqueue_script( 'jquery' );
 
