@@ -1,4 +1,4 @@
-1.1 - 
+1.1 - 13 Feb 2013
 - Dropping support for IE7 & Mozilla 3..
 - Remove modernizr
 - Add HTML5 Shiv script
