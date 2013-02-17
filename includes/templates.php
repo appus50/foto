@@ -297,25 +297,6 @@ function foto_comment( $comment, $args, $depth ) {
 }
 endif; // ends check for foto_comment()
 
-
-/**
- * Display custom breadcrumbs
- *
- * @since foto 0.0.1
- */
-if ( ! function_exists( 'foto_do_breadrumbs' ) ) :
-function foto_do_breadrumbs() {
-
-	// If you installed wordpress seo or yoast breadcrumbs plugin, this function will automatically
-	// display the yoast breadcrumbs, but if you're not. The custom breadcrumbs will change it
-	if ( function_exists('yoast_breadcrumb') ) { yoast_breadcrumb('<div id="breadcrumbs">','</div>');
-	} else {
-		echo foto_breadcrumbs();
-	}
-}
-endif; // foto_do_breadrumbs()
-
-
 /**
  * Display navigation to next/previous comments pages when applicable
  *
