@@ -3,6 +3,7 @@
 - Remove modernizr
 - Add HTML5 Shiv script
 - Sidebar style
+- Remove twitter widget(buggy)
 
 1.0 - 09 Feb 2013
 - WordPress 3.5 compatibility
