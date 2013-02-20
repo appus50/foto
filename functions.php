@@ -80,7 +80,6 @@ function foto_setup() {
 	require( get_template_directory() . '/includes/extensions.php' );
 	require( get_template_directory() . '/includes/templates.php' );
 	require( get_template_directory() . '/includes/options-functions.php' );
-	require( get_template_directory() . '/includes/options-sidebar.php' ); // load sidebar for theme options
 
 } // end foto_setup
 
@@ -94,7 +93,7 @@ function foto_enqueue_scripts() {
 
 	wp_enqueue_style( 'foto-fonts', 'http://fonts.googleapis.com/css?family=Lato:400,700,400italic|Oswald:300', '', '1.0', 'all' );
 
-	wp_enqueue_style( 'foto-style', get_stylesheet_uri(), false, '1.1', 'all' );
+	wp_enqueue_style( 'foto-style', get_stylesheet_uri(), false, '1.2', 'all' );
 
 	wp_enqueue_script( 'jquery' );
 

@@ -5,7 +5,9 @@
  * Theme options for foto theme
  *
  * @package foto
- * @since foto 0.0.1
+ * @author	Satrya
+ * @license	license.txt
+ * @since 	0.0.1
  */
  
 function optionsframework_option_name() {
@@ -27,78 +29,78 @@ function optionsframework_option_name() {
 function optionsframework_options() {
 	
 	$social = array(
-		'foto_post' => __('Single post', 'foto'),
-		'foto_page' => __('Page', 'foto'),
-		'foto_both' => __('Both', 'foto'),
-		'foto_none' => __('None', 'foto')
+		'foto_post' => __( 'Single post', 'foto' ),
+		'foto_page' => __( 'Page', 'foto' ),
+		'foto_both' => __( 'Both', 'foto' ),
+		'foto_none' => __( 'None', 'foto' )
 	);
 	
 	$numbers = array(
-		'2' => __('Two', 'foto'), 
-		'3' => __('Three', 'foto'), 
-		'4' => __('Four', 'foto'), 
-		'5' => __('Five', 'foto'), 
-		'6' => __('Six', 'foto'), 
-		'7' => __('Seven', 'foto'), 
-		'8' => __('Eight', 'foto'), 
-		'9' => __('Nine', 'foto'), 
-		'10' => __('Ten', 'foto') 
+		'2' => __( 'Two', 'foto' ), 
+		'3' => __( 'Three', 'foto' ), 
+		'4' => __( 'Four', 'foto' ), 
+		'5' => __( 'Five', 'foto' ), 
+		'6' => __( 'Six', 'foto' ), 
+		'7' => __( 'Seven', 'foto' ), 
+		'8' => __( 'Eight', 'foto' ), 
+		'9' => __( 'Nine', 'foto' ), 
+		'10' => __( 'Ten', 'foto' ) 
 	);
 	
 	$options = array();
 
 	$options[] = array( 
-		'name' => __('General', 'foto'),
+		'name' => __( 'General', 'foto' ),
 		'type' => 'heading');
 							
 	$options[] = array( 
-		'name' => __('Custom Logo', 'foto'),
-		'desc' => __('Upload a logo for your website, or specify the image address of your online logo. Recommended size is 300x100', 'foto'),
+		'name' => __( 'Custom Logo', 'foto' ),
+		'desc' => __( 'Upload a logo for your website, or specify the image address of your online logo. Recommended size is 300x100', 'foto' ),
 		'id' => 'foto_custom_logo',
 		'type' => 'upload');
 								
 	$options[] = array( 
-		'name' => __('Custom Favicon', 'foto'),
-		'desc' => __('Upload a favicon for your website, or specify the image address of your online favicon. Recommended size is 16x16', 'foto'),
+		'name' => __( 'Custom Favicon', 'foto' ),
+		'desc' => __( 'Upload a favicon for your website, or specify the image address of your online favicon. Recommended size is 16x16', 'foto' ),
 		'id' => 'foto_custom_favicon',
 		'type' => 'upload');
 							
 	$options[] = array( 
-		'name' => __('Custom CSS', 'foto'),
-		'desc' => __('Quickly add some CSS rules to your theme by adding it to this box.', 'foto'),
+		'name' => __( 'Custom CSS', 'foto' ),
+		'desc' => __( 'Quickly add some CSS rules to your theme by adding it to this box.', 'foto' ),
 		'id' => 'foto_custom_css',
 		'std' => '',
 		'type' => 'textarea'); 
 						
 	$options[] = array( 
-		'name' => __('Analytic Code', 'foto'),
-		'desc' => __('Paste your Google Analytics (or other) tracking code here. It will be inserted before the closing body tag of your theme.', 'foto'),
+		'name' => __( 'Analytic Code', 'foto' ),
+		'desc' => __( 'Paste your Google Analytics (or other) tracking code here. It will be inserted before the closing body tag of your theme.', 'foto' ),
 		'id' => 'foto_analytic_code',
 		'type' => 'textarea');
 						
 	/* ============================== End General Settings ================================= */	
 	
 	$options[] = array( 
-		'name' => __('Theme', 'foto'),
+		'name' => __( 'Theme', 'foto' ),
 		'type' => 'heading');
 		
 	$options[] = array( 
-		'name' => __('Welcome Text', 'foto'),
-		'desc' => __('Put your welcome text here, it only visible on home page', 'foto'),
+		'name' => __( 'Welcome Text', 'foto' ),
+		'desc' => __( 'Put your welcome text here, it only visible on home page', 'foto' ),
 		'std' => 'Hi! Welcome to my personal photo site. This is just a place for me to share my photos. I hope you&rsquo;t ll enjoy it.',
 		'id' => 'foto_welcome_text',
 		'type' => 'textarea');
 	
 	$options[] = array( 
-		'name' => __('Featured posts slider', 'foto'),
-		'desc' => __('Check this option to show featured posts on home page. Featured posts is based on sticky post. To show the featured posts, you only need create a post then check the sticky post option.', 'foto'),
+		'name' => __( 'Featured posts slider', 'foto' ),
+		'desc' => __( 'Check this option to show featured posts on home page. Featured posts is based on sticky post. To show the featured posts, you only need create a post then check the sticky post option.', 'foto' ),
 		'id' => 'foto_show_featured',
 		'type' => 'checkbox'
 	);
 	
 	$options[] = array( 
-		'name' => __('Select a number of featured posts', 'foto'),
-		'desc' => __('How many featured posts you want to show ?', 'foto'),
+		'name' => __( 'Select a number of featured posts', 'foto' ),
+		'desc' => __( 'How many featured posts you want to show ?', 'foto' ),
 		'id' => 'foto_featured',
 		'class' => 'hidden',
 		'type' => 'select',
@@ -108,30 +110,30 @@ function optionsframework_options() {
 	/* ============================== End Theme Settings ================================= */	
 	
 	$options[] = array( 
-		'name' => __('Social', 'foto'),
+		'name' => __( 'Social', 'foto' ),
 		'type' => 'heading');
 		
 	$options[] = array( 
-		'name' => __('Custom RSS Feed', 'foto'),
-		'desc' => __('You can put the feedburner link here', 'foto'),
+		'name' => __( 'Custom RSS Feed', 'foto' ),
+		'desc' => __( 'You can put the feedburner link here', 'foto' ),
 		'id' => 'foto_rss_custom',
 		'type' => 'text');
 		
 	$options[] = array( 
-		'name' => __('Twitter', 'foto'),
-		'desc' => __('Twitter url. ex: http://twitter.com/yourusername', 'foto'),
+		'name' => __( 'Twitter', 'foto' ),
+		'desc' => __( 'Twitter url. ex: http://twitter.com/yourusername', 'foto' ),
 		'id' => 'foto_twitter_username',
 		'type' => 'text');
 						
 	$options[] = array( 
-		'name' => __('Facebook', 'foto'),
-		'desc' => __('Facebook url. ex: http://www.facebook.com/yourusername', 'foto'),
+		'name' => __( 'Facebook', 'foto' ),
+		'desc' => __( 'Facebook url. ex: http://www.facebook.com/yourusername', 'foto' ),
 		'id' => 'foto_fb_username',
 		'type' => 'text');
 						
 	$options[] = array( 
-		'name' => __('Google Plus', 'foto'),
-		'desc' => __('Google plus url. ex: https://plus.google.com/u/109253446701726260861', 'foto'),
+		'name' => __( 'Google Plus', 'foto' ),
+		'desc' => __( 'Google plus url. ex: https://plus.google.com/u/109253446701726260861', 'foto' ),
 		'id' => 'foto_gplus_username',
 		'type' => 'text');
 						
@@ -141,13 +143,11 @@ function optionsframework_options() {
 	return $options;
 }
 
-/* 
+/** 
  * Custom script for theme options
  *
- * @since foto 0.0.1
+ * @since 0.0.1
  */
-
-add_action('optionsframework_custom_scripts', 'foto_custom_scripts');
 function foto_custom_scripts() { ?>
 	<script type='text/javascript'>
 	jQuery(document).ready(function($) {
@@ -164,3 +164,5 @@ function foto_custom_scripts() { ?>
 	</script>
 <?php
 }
+add_action( 'optionsframework_custom_scripts', 'foto_custom_scripts' );
+?>
