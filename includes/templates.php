@@ -73,7 +73,7 @@ endif; // foto_page_title()
  */
 if ( ! function_exists( 'foto_content_nav' ) ):
 function foto_content_nav( $nav_id ) {
-	global $wp_query;
+	global $post_query;
 
 	$nav_class = 'site-navigation paging-navigation clearfix';
 	if ( is_single() )
@@ -88,11 +88,11 @@ function foto_content_nav( $nav_id ) {
 		<?php previous_post_link( '<div class="nav-previous">%link</div>', '<span class="meta-nav">' . _x( '&larr;', 'Previous post link', 'foto' ) . '</span> %title' ); ?>
 		<?php next_post_link( '<div class="nav-next">%link</div>', '%title <span class="meta-nav">' . _x( '&rarr;', 'Next post link', 'foto' ) . '</span>' ); ?>
 
-	<?php elseif ( $wp_query->max_num_pages > 1 && ( is_home() || is_archive() || is_search() ) ) : // navigation links for home, archive, and search pages ?>
+	<?php elseif ( $post_query->max_num_pages > 1 && ( is_home() || is_archive() || is_search() ) ) : // navigation links for home, archive, and search pages ?>
 		
 		<?php if(function_exists('wp_pagenavi')) : wp_pagenavi(); else : // integrate wp-pagenavi ?>
 			<?php if ( get_next_posts_link() ) : ?>
-			<div class="nav-previous"><?php next_posts_link( __( 'Older', 'foto' ) ); ?></div>
+			<div class="nav-previous"><?php next_posts_link( __( 'Older', 'foto' ), $post_query->max_num_pages ); ?></div>
 			<?php endif; ?>
 
 			<?php if ( get_previous_posts_link() ) : ?>
