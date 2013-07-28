@@ -30,6 +30,12 @@
 					<?php the_content(); ?>
 					<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'foto' ), 'after' => '</div>' ) ); ?>
 				</div>
+				
+				<div class="hide">
+					<div class="entry-title"><?php the_title(); ?></div>
+					<div class="updated"><?php the_modified_date('c') ?></div>
+				</div>
+			
 			</div><!-- end .post-content -->
 			
 			<?php
