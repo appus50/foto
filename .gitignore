@@ -1,3 +1,8 @@
 .sass-cache
 sass
 config.rb
+
+# Eclipse files
+.buildpath
+.project
+.settings
