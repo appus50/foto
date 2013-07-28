@@ -107,6 +107,12 @@ function optionsframework_options() {
 		'std' => '3',
 		'options' => $numbers );
 	
+	$options[] = array(
+		'name' => __('Number of posts per page', 'foto'),
+		'desc' => __('Choose the number of posts per page', 'foto'),
+		'id' => 'foto_custom_postsperpage',
+		'type' => 'text');
+	
 	/* ============================== End Theme Settings ================================= */	
 	
 	$options[] = array( 

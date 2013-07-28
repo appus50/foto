@@ -26,7 +26,8 @@ get_header(); ?>
 			  	
 		        $args = array(
 	                'paged' => $paged,
-					'post__not_in' => get_option( 'sticky_posts' )		
+					'post__not_in' => get_option( 'sticky_posts' ),
+					'posts_per_page' => foto_posts_per_page(),		
 		        );
 
 		        $post_query = new WP_Query( $args );

@@ -314,4 +314,19 @@ function foto_comment_nav() {
 }
 endif; // foto_comment_nav()
 
+/**
+ * Return variable from theme options foto_custom_postsperpage or default "10"
+ *
+ * @since foto 1.0.1
+ */
+if ( ! function_exists( 'foto_posts_per_page' ) ) :
+function foto_posts_per_page() {
+	$nb_posts = of_get_option('foto_custom_postsperpage');
+	if ( strlen($nb_posts)>0 && intval($nb_posts)==$nb_posts )
+		return $nb_posts;
+	else
+		return 10;
+}
+endif; // foto_comment_nav()
+
 ?>

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Foto 1.0\n"
-"POT-Creation-Date: 2013-07-28 17:08+0100\n"
-"PO-Revision-Date: 2013-07-28 20:56+0100\n"
+"POT-Creation-Date: 2013-07-28 22:19+0100\n"
+"PO-Revision-Date: 2013-07-28 22:21+0100\n"
 "Last-Translator: Appus <contact@appus.fr>\n"
 "Language-Team: Satrya <satrya@satrya.me>\n"
 "Language: English\n"
@@ -101,7 +101,7 @@ msgstr "Grande Image"
 msgid "Description"
 msgstr "Description"
 
-#: ../content-single.php:46
+#: ../content-single.php:52
 msgid "Entry Meta"
 msgstr "Métadonnées"
 
@@ -174,7 +174,7 @@ msgstr "Flux Rss"
 msgid "Add me to your circle"
 msgstr "Ajoutez-moi à votre cercle"
 
-#: ../header.php:63 ../includes/options.php:135
+#: ../header.php:63 ../includes/options.php:141
 msgid "Google Plus"
 msgstr "Google Plus"
 
@@ -182,7 +182,7 @@ msgstr "Google Plus"
 msgid "Add me as your friend"
 msgstr "Ajoutez-moi comme votre ami"
 
-#: ../header.php:65 ../includes/options.php:129
+#: ../header.php:65 ../includes/options.php:135
 msgid "Facebook"
 msgstr "Facebook"
 
@@ -190,7 +190,7 @@ msgstr "Facebook"
 msgid "Follow Me"
 msgstr "Suivez-moi"
 
-#: ../header.php:67 ../includes/options.php:123
+#: ../header.php:67 ../includes/options.php:129
 msgid "Twitter"
 msgstr "Twitter"
 
@@ -247,7 +247,7 @@ msgstr "Sélectionnez une couleur"
 
 #: ../admin/options-framework.php:243
 msgid "Save Options"
-msgstr "Options de sauvegarde"
+msgstr "Sauvegarder les options"
 
 #: ../admin/options-framework.php:244
 msgid "Restore Defaults"
@@ -381,7 +381,7 @@ msgstr ""
 msgid "Title:"
 msgstr "Titre :"
 
-#: ../includes/extensions.php:47 ../includes/options.php:113
+#: ../includes/extensions.php:47 ../includes/options.php:119
 msgid "Social"
 msgstr "Social"
 
@@ -523,23 +523,31 @@ msgstr "Sélectionner un numéro de messages en vedette"
 msgid "How many featured posts you want to show ?"
 msgstr "Combien de messages en vedette que vous voulez montrer?"
 
-#: ../includes/options.php:117
+#: ../includes/options.php:111
+msgid "Number of posts per page"
+msgstr "Nombre d'articles par page"
+
+#: ../includes/options.php:112
+msgid "Choose the number of posts per page"
+msgstr "Saisissez le nombre d'articles par page"
+
+#: ../includes/options.php:123
 msgid "Custom RSS Feed"
 msgstr "Personnalisé Flux RSS"
 
-#: ../includes/options.php:118
+#: ../includes/options.php:124
 msgid "You can put the feedburner link here"
 msgstr "Vous pouvez mettre le lien ici feedburner"
 
-#: ../includes/options.php:124
+#: ../includes/options.php:130
 msgid "Twitter url. ex: http://twitter.com/yourusername"
 msgstr "Url Twitter. ex: http://twitter.com/yourusername"
 
-#: ../includes/options.php:130
+#: ../includes/options.php:136
 msgid "Facebook url. ex: http://www.facebook.com/yourusername"
 msgstr "Url Facebook. ex: http://www.facebook.com/yourusername"
 
-#: ../includes/options.php:136
+#: ../includes/options.php:142
 msgid "Google plus url. ex: https://plus.google.com/u/109253446701726260861"
 msgstr "Url Google plus. ex: https://plus.google.com/u/109253446701726260861"
 
@@ -730,9 +738,6 @@ msgstr "Commentaires récents &rarr;"
 
 #~ msgid "Twitter Username:"
 #~ msgstr "Nom d'utilisateur Twitter :"
-
-#~ msgid "Number of Tweets to Retrieve:"
-#~ msgstr "Nombre de tweets à récupérer :"
 
 #~ msgid "Search Results for:"
 #~ msgstr "Résultats de la recherche pour :"
