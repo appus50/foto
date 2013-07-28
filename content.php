@@ -28,6 +28,15 @@
 				<?php foto_entry_info(); ?>
 			</div>
 			
+			<div class="hide">
+				<span class="author">
+					<span class="vcard">
+ 						<span class="fn nickname"><?php the_author() ?></span>
+					</span>				
+				</span>
+				<span class="updated"><?php the_modified_date('c') ?></span>
+			</div>
+			
 		</div><!-- end .entry-detail -->
 		
 		<?php do_action( 'foto_after_entry' ); ?>

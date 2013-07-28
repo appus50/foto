@@ -42,6 +42,16 @@
 								<?php endif; ?>
 								
 								<h2 class="entry-title"><?php the_title(); ?></h2>
+								
+								<div class="hide">
+									<span class="author">
+										<span class="vcard">
+					 						<span class="fn nickname"><?php the_author() ?></span>
+										</span>				
+									</span>
+									<span class="updated"><?php the_modified_date('c') ?></span>
+								</div>
+								
 							</article><!-- end #post-<?php the_ID(); ?> -->
 						</li>
 
